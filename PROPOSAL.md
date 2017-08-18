@@ -9,7 +9,7 @@ Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
 When a new user visits the app, the first screen is a Welcome screen where the user can register to create a unique login. A registered user can simply login.
 
-After loggging in, the user will be directed to the main menu. At the main menus, the user canchoose to create a new flash card, review all flash cards, or review just the hard flash card - which the user got wrong previously. The user will also see a grand total score for how many cards the user got right during the user's flash card reviews.
+After loggging in, the user will be directed to the main menu. At the main menus, the user can choose to create a new flash card, review all flash cards, use a spaced-repetition method of review (see below). The user will also see a grand total score for how many cards the user got right during the user's flash card reviews.
 
 A new user would want to begin by creating several flash cards. A button on the main menu would direc the user to a form where the create can create a front side (with a question or word) and a back side for each flash card. 
 
