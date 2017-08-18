@@ -1,7 +1,7 @@
 # Proposal - DEK
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
-![team image](./Team-Photo.JPG)
+![team_image](./images/Team-Photo.JPG)
 
 ## User Story
 
