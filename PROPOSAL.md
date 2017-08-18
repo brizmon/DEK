@@ -17,22 +17,18 @@ When the user is reviewing flash cards, the user will view the front side of a f
 
 Cards can also be deleted, or edited and updated.
 
-
 ## Wireframes
 
 Welcome screen - User can login or register
 [ADD WIREFRAME]
 
-Main Menu - User can (1) choose to create a new flash card, (2) review all flash cards, (3) review just the hard flash cards, (4) see a grand total score for how many cards the user got right for all reviews
+Main Menu
 [ADD WIREFRAME]
 
-Form to Add a New Flash Card
+Creating a New Flash Card
 [ADD WIREFRAME]
 
-User tests self by viewing the front side of a flash card, clicks when ready to view other side
-[ADD WIREFRAME]
-
-User clicks on 'right' or 'wrong' buttons to record whether the user got it right
+Quiz
 [ADD WIREFRAME]
 
 ## Technology
@@ -49,9 +45,6 @@ The App will utilize the following technology
 [ADD DESCRIPTION]
 
 ### Auth
-[ADD DESCRIPTION]
-
-### Firebase
 [ADD DESCRIPTION]
 
 ## Phases of Completion
@@ -82,5 +75,5 @@ The App will utilize the following technology
 
 * Phase 1: Friday
     * Improvements to appearance
-    * Add any additional features of sufficient time remaining
+    * Add any additional features if sufficient time remaining
 

@@ -1,19 +1,25 @@
 # Group Project 3
+Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
-## Wireframes
+[ADD SCREEN SHOT]
 
+## User Story
+[ADD TEXT]
 
 ## Technologies
+[ADD TEXT]
 
+### Sample Code
+[ADD CODE SNIPPETS]
 
-## Approach
+## Making of the App
+[ADD TEXT]
 
-## Installation instructions
+### Wireframes
+[ADD IMAGES]
 
+### Challenges
+[ADD TEXT]
 
-## ERDs
-
-## User Stories
-
-
-## Issues
+## Future Improvements
+[ADD TEXT]
