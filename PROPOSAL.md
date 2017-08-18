@@ -21,17 +21,32 @@ Each card can also be deleted, or edited and updated.
 
 ## Wireframes
 
-Welcome screen - User can login or register
-[ADD WIREFRAME]
+### Welcome screen - User can login or register
+![img1](./images/1.jpg)
 
-Main Menu
-[ADD WIREFRAME]
+### Register
 
-Creating a New Flash Card
-[ADD WIREFRAME]
+![img2](images/2.jpg)
 
-Quiz
-[ADD WIREFRAME]
+### Creating a New Flash Card
+
+![img3](images/3.jpg)
+![img4](images/4.jpg)
+![img5](images/5.jpg)
+![img6](images/6.jpg)
+![img7](images/7.jpg)
+
+### Taking the Quiz
+
+![img8](images/8.jpg)
+![img9](images/9.jpg)
+![img10](images/10.jpg)
+![img11](images/11.jpg)
+![img12](images/12.jpg)
+![img13](images/13.jpg)
+![img14](images/14.jpg)
+
+
 
 ## Technology
 
