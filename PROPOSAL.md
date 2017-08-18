@@ -42,7 +42,7 @@ The App will utilize the following technology
 [ADD DESCRIPTION]
 
 ### SQL
-[ADD DESCRIPTION]
+The approach of our card system will be sorting the user's cards into an array of database tables that each dictate a certain point of time in the future when the card should prompt again. Each card will have a tally coloumn that updates based on whether the user got the question right or wrong.
 
 ### Auth
 [ADD DESCRIPTION]
