@@ -13,9 +13,11 @@ After loggging in, the user will be directed to the main menu. At the main menus
 
 A new user would want to begin by creating several flash cards. A button on the main menu would direc the user to a form where the create can create a front side (with a question or word) and a back side for each flash card. 
 
+There will be 2 types of flach card reviews: (1) full review; and (2) spaced-repetition. A full-review quiz will review every card the user has created. The spaced-repetition quiz will review (1) cards the user got wrong the last time and (2) any cards the user has not reviewed recently (maybe 7 days; exact about of time yet to be determined).
+
 When the user is reviewing flash cards, the user will view the front side of a flash card. When the user is ready, the user can click to view other side and check whether the user was right or wrong. The user clicks on 'right' or 'wrong' buttons to record whether the user got it right. If the card is 'wrong', that information is saved in the database and the card will be re-reviewed in the difficult set of cards. A card that is right would only be reviewed in a full review of all cards.
 
-Cards can also be deleted, or edited and updated.
+Each card can also be deleted, or edited and updated.
 
 ## Wireframes
 
@@ -36,7 +38,7 @@ Quiz
 The App will utilize the following technology
 
 ### React
-[ADD DESCRIPTION]
+The App will use React to create the front-end file structure.
 
 ### Express
 [ADD DESCRIPTION]
