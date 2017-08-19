@@ -1,24 +1,5 @@
 # Group Project 3
-<<<<<<< HEAD
 
-## Wireframes
-
-
-## Technologies
-
-
-## Approach
-
-## Installation instructions
-
-
-## ERDs
-
-## User Stories
-
-
-## Issues
-=======
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
 [ADD SCREEN SHOT]
@@ -55,4 +36,4 @@ Each card can also be deleted, or edited and updated.
 
 ## Future Improvements
 [ADD TEXT]
->>>>>>> 3dc49494cdcbea643fd8e65becfee6633315ac7c
+
