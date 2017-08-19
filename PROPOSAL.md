@@ -28,10 +28,13 @@ Each card can also be deleted, or edited and updated.
 
 ![img2](images/2.jpg)
 
+### Main Menu Screen
+
+![img4](images/4.jpg)
+
 ### Creating a New Flash Card
 
 ![img3](images/3.jpg)
-![img4](images/4.jpg)
 ![img5](images/5.jpg)
 ![img6](images/6.jpg)
 ![img7](images/7.jpg)
