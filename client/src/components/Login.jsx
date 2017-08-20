@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-class Register extends Component{
+class Login extends Component{
 
     handleInputChange = (e) => {
         const name = e.target.name;
@@ -13,7 +13,7 @@ class Register extends Component{
     }
 
       
-    handleRegister = (e) => {
+    handleLogin = (e) => {
         e.preventDefault();
         let keys = Object.keys(this.state);
         // Do axios call here
@@ -21,22 +21,16 @@ class Register extends Component{
 
     render(){
         return(
-            <form action="/register" method='POST'>
-                <input type="text" name='firstName' placeholder='First Name'
-                onChange={(e)=>this.handleInputChange(e)}/>
-                <input type="text" name='lastName' placeholder='Last Name'
-                onChange={(e)=>this.handleInputChange(e)}/>
+            <form action="/login" method='POST'>
                 <input type="text" name='userName' placeholder='User Name'
-                onChange={(e)=>this.handleInputChange(e)}/>
-                <input type="email" name='email' placeholder='Email'
                 onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="password" name='password' placeholder='Password'
                 onChange={(e)=>this.handleInputChange(e)}/>
-                <input onClick={(e)=>this.handleRegister(e)} type="submit" value='Submit'/>
-            </form>
+                <input onClick={(e)=>this.handleLogin(e)} type="submit" value='Submit'/>
+            </form>   
         )
     }
 }
 
 
-export default Register;
+export default Login;
