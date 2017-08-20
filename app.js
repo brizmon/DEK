@@ -68,10 +68,6 @@ app.get('/logout', function(req, res){
 });
 
 
-const authRoutes = require('./routes/auth-routes');
-app.use('/auth', authRoutes);
-
-
 
 
 app.get('*', (req, res) => {
