@@ -59,13 +59,13 @@ The App will utilize the following technology
 The App will use React to create the front-end file structure.
 
 ### Express
-[ADD DESCRIPTION]
+The Express-Backend will handle the requests that the front end sends. This happens via routing requests. 
 
 ### SQL
 The approach of our card system will be sorting the user's cards into an array of database tables that each dictate a certain point of time in the future when the card should prompt again. Each card will have a tally coloumn that updates based on whether the user got the question right or wrong.
 
 ### Auth
-[ADD DESCRIPTION]
+As typical authorization happens, the user will get to a register/login screen as a landing page. From there the user will send a request to the server which will start a connection. 
 
 ## Phases of Completion
 
