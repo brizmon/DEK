@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import Register from './components/Register';
 import Login from './components/Login';
+import axios from 'axios';
 
 class App extends Component {
 
