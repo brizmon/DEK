@@ -10,13 +10,6 @@ const passport = require('passport');
 
 
 
-
-
-
-
-
-
-
 const app = express();
 require('dotenv').config();
 
@@ -24,16 +17,16 @@ require('dotenv').config();
 
 
 
-
-
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 
 
 app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}!`);
 });
+
+
+
 
 app.use(logger('dev'));
 app.use(express.static('public'));
@@ -53,9 +46,20 @@ app.use(passport.session());
 
 
 
-app.get('/', (req, res)=>{
+//routes
 
-});
+// app.get('/', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// });
+
+const authRoutes = require('./routes/auth-routes.js');
+app.use('/auth', authRoutes);
+// const cardRoutes = require('./routes/card-routes');
+// app.use('/cards', cardRoutes);
+const userRoutes = require('./routes/user-routes');
+app.use('/user', userRoutes);
+
+
 
 
 app.get('/logout', function(req, res){

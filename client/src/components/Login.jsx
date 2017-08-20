@@ -13,11 +13,6 @@ class Login extends Component{
     }
 
       
-    handleLogin = (e) => {
-        e.preventDefault();
-        let keys = Object.keys(this.state);
-        // Do axios call here
-    } 
 
     render(){
         return(
@@ -26,7 +21,7 @@ class Login extends Component{
                 onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="password" name='password' placeholder='Password'
                 onChange={(e)=>this.handleInputChange(e)}/>
-                <input onClick={(e)=>this.handleLogin(e)} type="submit" value='Submit'/>
+                <input onClick={(e)=>this.props.handleLoginSubmit(e,this.state.userName, this.state.password)} type="submit" value='Submit'/>
             </form>   
         )
     }

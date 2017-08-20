@@ -13,11 +13,6 @@ class Register extends Component{
     }
 
       
-    handleRegister = (e) => {
-        e.preventDefault();
-        let keys = Object.keys(this.state);
-        // Do axios call here
-    } 
 
     render(){
         return(
@@ -32,7 +27,7 @@ class Register extends Component{
                 onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="password" name='password' placeholder='Password'
                 onChange={(e)=>this.handleInputChange(e)}/>
-                <input onClick={(e)=>this.handleRegister(e)} type="submit" value='Submit'/>
+                <input onClick={(e)=>this.props.handleRegisterSubmit(e, this.state)} type="submit" value='Submit'/>
             </form>
         )
     }

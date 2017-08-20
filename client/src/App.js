@@ -10,6 +10,49 @@ import Register from './components/Register';
 import Login from './components/Login';
 
 class App extends Component {
+
+
+  handleLoginSubmit = (e, username, password) => {
+    e.preventDefault();
+    axios.post('/auth/login', {
+      username,
+      password,
+    }).then(res => {
+      this.setState({
+        auth: res.data.auth,
+        user: res.data.user,
+        currentPage: 'home',
+      });
+    }).catch(err => console.log(err));
+  }
+
+
+  // options are firstName, lastName, userName, email, password
+  handleRegisterSubmit = (e, options) => {
+    e.preventDefault();
+    axios.post('/auth/register', {
+      options
+    }).then(res => {
+      this.setState({
+        auth: res.data.auth,
+        user: res.data.user,
+        currentPage: 'home',
+      });
+    }).catch(err => console.log(err));
+  }
+
+
+
+  logOut() {
+    axios.get('/auth/logout')
+      .then(res => {
+        this.setState({
+          auth: false,
+          currentPage: 'home',
+        })
+      }).catch(err => console.log(err));
+  }
+
   render() {
     return (
       <Router>
