@@ -8,31 +8,32 @@ const usersController = {};
 
 
 usersController.create = (req, res) => {
-    const salt = bcrypt.genSaltSync();
-    const hash = bcrypt.hashSync(req.body.password, salt);
-    User.create({
-        username: req.body.username,
-        email: req.body.email,
-        password_digest: hash,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-    })
-    .then(user => {
-        categoryHelpers.seedUserData(res, req, user);
-        console.log(`Created ${user}`)
-        req.login(user, (err) => {
-            if(err) return next(err);
-            res.json({
-                message: 'ok',
-                user: user,
-                auth: true,
-            })
-        })
-    })
-    .catch(err => {
-        console.log(err);
-        res.status(500).json({error: err});
-    })
+    console.log(req.body)
+    // const salt = bcrypt.genSaltSync();
+    // const hash = bcrypt.hashSync(req.body.password, salt);
+    // User.create({
+    //     username: req.body.username,
+    //     email: req.body.email,
+    //     password_digest: hash,
+    //     firstname: req.body.firstname,
+    //     lastname: req.body.lastname,
+    // })
+    // .then(user => {
+    //     categoryHelpers.seedUserData(res, req, user);
+    //     console.log(`Created ${user}`)
+    //     req.login(user, (err) => {
+    //         if(err) return next(err);
+    //         res.json({
+    //             message: 'ok',
+    //             user: user,
+    //             auth: true,
+    //         })
+    //     })
+    // })
+    // .catch(err => {
+    //     console.log(err);
+    //     res.status(500).json({error: err});
+    // })
 }
 
 

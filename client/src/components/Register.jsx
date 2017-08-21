@@ -16,7 +16,7 @@ class Register extends Component{
 
     render(){
         return(
-            <form action="/register" method='POST'>
+            <form action="/auth/register" method='POST'>
                 <input type="text" name='firstName' placeholder='First Name'
                 onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="text" name='lastName' placeholder='Last Name'

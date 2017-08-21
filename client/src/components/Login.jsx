@@ -16,7 +16,7 @@ class Login extends Component{
 
     render(){
         return(
-            <form action="/login" method='POST'>
+            <form action="/auth/login" method='POST'>
                 <input type="text" name='userName' placeholder='User Name'
                 onChange={(e)=>this.handleInputChange(e)}/>
                 <input type="password" name='password' placeholder='Password'
