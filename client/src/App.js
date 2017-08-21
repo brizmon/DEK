@@ -8,6 +8,9 @@ import Footer from './components/Footer';
 import Welcome from './components/Welcome';
 import Register from './components/Register';
 import Login from './components/Login';
+
+import Main from './components/Main';
+
 import axios from 'axios';
 
 class App extends Component {
@@ -63,6 +66,7 @@ class App extends Component {
             <Route exact path="/" component={Welcome} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/main" component={Main} />
           </div>
           <Footer />
         </div>
