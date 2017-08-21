@@ -14,6 +14,7 @@ import UserProfile from './components/UserProfile';
 import NameDeck from './components/NameDeck';
 import CreateCard from './components/CreateCard';
 import PickQuizType from './components/PickQuizType';
+import QuizScreen from './components/QuizScreen';
 
 import axios from 'axios';
 
@@ -75,6 +76,7 @@ class App extends Component {
             <Route exact path="/namedeck" component={NameDeck} />
             <Route exact path="/createcard" component={CreateCard} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
+            <Route exact path="/quizscreen" component={QuizScreen} />
 
           </div>
           <Footer />
