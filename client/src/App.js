@@ -65,6 +65,7 @@ class App extends Component {
         <div className="App">
           <Header />
           <div className="main">
+
             <Route exact path="/" render={() => <Welcome />} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
