@@ -56,11 +56,57 @@ p {
 
 }
 
+/*Name Deck component*/
+
 .name-deck {
 
 }
 
 .namedeck-button {
+
+}
+
+
+/*Create Card component*/
+.create-card {
+
+}
+
+.create-front {
+
+}
+
+.create-front-side-card {
+
+}
+
+.save-front-side-card {
+
+}
+
+.create-back {
+
+}
+
+.create-back-side-card {
+
+}
+
+.save-back-side-card {
+
+}
+
+/*Pick Quiz Type Component*/
+
+.pick-quiz-type {
+
+}
+
+.pickquiz-form {
+
+}
+
+.pickquiz-button {
 
 }
 
