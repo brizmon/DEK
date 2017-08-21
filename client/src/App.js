@@ -65,7 +65,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Header />
           <div className="main">
 
             <Route exact path="/" render={() => <Welcome />} />
@@ -79,7 +78,6 @@ class App extends Component {
             <Route exact path="/quizscreen" component={QuizScreen} />
 
           </div>
-          <Footer />
         </div>
       </Router>
     );
