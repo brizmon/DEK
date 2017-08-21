@@ -50,7 +50,6 @@ Each card can also be deleted, or edited and updated.
 ![img14](images/14.jpg)
 
 
-
 ## Technology
 
 The App will utilize the following technology
@@ -66,6 +65,11 @@ The approach of our card system will be sorting the user's cards into an array o
 
 ### Auth
 As typical authorization happens, the user will get to a register/login screen as a landing page. From there the user will send a request to the server which will start a connection. 
+
+### To Be Determined: Third Party API Call or Testing
+The team is looking for a third-party API call it can use to add trivia of the day, or possibly a word of the day to display on the welcome page or the main menu page.
+
+Alteratively, the team may choose to implement testing to catch any bugs in the app.
 
 ## Phases of Completion
 
