@@ -16,13 +16,15 @@ class Login extends Component{
 
     render(){
         return(
-            <form action="/auth/login" method='POST'>
-                <input type="text" name='userName' placeholder='User Name'
-                onChange={(e)=>this.handleInputChange(e)}/>
-                <input type="password" name='password' placeholder='Password'
-                onChange={(e)=>this.handleInputChange(e)}/>
-                <input onClick={(e)=>this.props.handleLoginSubmit(e,this.state.userName, this.state.password)} type="submit" value='Submit'/>
-            </form>   
+            <div className="login-container">
+                <form action="/auth/login" method='POST'>
+                    <input type="text" name='userName' placeholder='User Name'
+                    onChange={(e)=>this.handleInputChange(e)}/>
+                    <input type="password" name='password' placeholder='Password'
+                    onChange={(e)=>this.handleInputChange(e)}/>
+                    <input onClick={(e)=>this.props.handleLoginSubmit(e,this.state.userName, this.state.password)} type="submit" value='Submit'/>
+                </form>  
+            </div> 
         )
     }
 }
