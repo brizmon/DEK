@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import { Redirect } from 'react-router';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -20,54 +21,22 @@ import axios from 'axios';
 
 class App extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      auth: false,
-      user: null,
-      currentPage: 'welcome',
-    }
-  }
-
-
-  setPage(page) {
-    console.log('click');
-    this.setState({
-      currentPage: page,
-    })
-  }
-
-  decideWhichPage() {
-    switch(this.state.currentPage) {
-      case 'login':
-        return <Login handleLoginSubmit={this.handleLoginSubmit} />;
-        break;
-      case 'register':
-        return <Register handleRegisterSubmit={this.handleRegisterSubmit} />;
-        break;
-      case 'home':
-        return <Route exact path="/main" component={Main} />
-        break;
-    }
-  }
-
-
   handleLoginSubmit = (e, username, password) => {
     e.preventDefault();
     axios.post('/auth/login', {
       username,
       password,
     }).then(res => {
+      console.log(res.data.user)
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
-        currentPage: 'home',
       });
+      window.location.href ='/main';
+      console.log(this.state)
     }).catch(err => console.log(err));
   }
 
-
-  // options are firstName, lastName, userName, email, password
   handleRegisterSubmit = (e, options) => {
     e.preventDefault();
     axios.post('/auth/register', {
@@ -75,9 +44,6 @@ class App extends Component {
     })
     .then(res => {
       this.setState(options)
-      this.setState({
-        currentPage: 'home',
-      });
     })
     .catch(err => console.log(err));
   }
@@ -87,7 +53,7 @@ class App extends Component {
       .then(res => {
         this.setState({
           auth: false,
-          currentPage: 'home',
+          currentPage: 'welcome',
         })
       }).catch(err => console.log(err));
   }
@@ -98,10 +64,8 @@ class App extends Component {
         <div className="App">
           <div className="main">
 
-            {this.decideWhichPage()}
-
             <Route exact path="/" render={() => <Welcome />} />
-
+            <Route exact path="/main" render={() => <Main />} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" component={UserProfile} />
