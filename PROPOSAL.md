@@ -48,6 +48,8 @@ Each card can also be deleted, or edited and updated.
 ![img12](images/12.jpg)
 ![img13](images/13.jpg)
 ![img14](images/14.jpg)
+![img14](images/15.jpg)
+![img14](images/16.jpg)
 
 
 ## Technology
