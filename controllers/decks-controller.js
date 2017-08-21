@@ -5,9 +5,7 @@ const deckController = {};
 deckController.index = (req, res) => {
     Card.findAll()
     .then(card => {
-        console.log('In index');
-        // res.render('',{
-        // })
+        console.log(`${card} is in index`);
     })
     .catch(err => {
         console.log(err);
@@ -16,6 +14,8 @@ deckController.index = (req, res) => {
 }
 
 deckController.create = (req, res) => {
+
+    console.log("deck-controller, create from "+req.body);
     Card.create({
         user_id: req.body.user_id,
         question: req.body.question,
@@ -26,7 +26,14 @@ deckController.create = (req, res) => {
         timesWrong: req.body.timesWrong,
     })
     .then(card => {
-        console.log(`Created ${card} in decks-controller`)
+        console.log(`Created ${card} in decks-controller`);
+        res.json({
+            message: 'Card created!',
+            data: card,
+        })
+        // HERE, is there anything else necessary to to render
+        // or redirect without conflicting with react routing after
+        // creating the card?
     })
     .catch(err => {
         console.log(err);
@@ -53,8 +60,10 @@ deckController.update = (res, res) => {
     })
 }
 
+
+
 deckController.delete = (req, res) => {
-    Card.destroy(req.params.id)
+    Card.delete(req.params.id)
     .then(card => {
         console.log('We deleted ${card}')
     })
