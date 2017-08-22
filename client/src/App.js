@@ -16,6 +16,7 @@ import NameDeck from './components/NameDeck';
 import CreateCard from './components/CreateCard';
 import PickQuizType from './components/PickQuizType';
 import QuizScreen from './components/QuizScreen';
+import EditCards from './components/EditCards';
 
 import axios from 'axios';
 
@@ -56,15 +57,14 @@ class App extends Component {
     .catch(err => console.log(err));
   }
 
-
   handleRedirect = (path) => {
     this.setState({
       redirect: !this.state.redirect,
       redirecting: path,
     })
+    console.log(`The path is: ` + path)
     this.setState({
       redirect: !this.state.redirect,
-      redirecting: '',
     })
   }
 
@@ -92,7 +92,7 @@ class App extends Component {
         <div className="App">
           <div className="main">
             <Route exact path="/" render={() => <Welcome />} />
-            <Route exact path="/main" render={() => <Main />} />
+            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} />} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" component={UserProfile} />
@@ -100,6 +100,7 @@ class App extends Component {
             <Route exact path="/createcard"  component={CreateCard} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
+            <Route exact path="/editcards" component={EditCards} />
             {this.redirectTo()}
           </div>
         </div>
