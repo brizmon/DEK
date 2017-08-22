@@ -66,17 +66,20 @@ button:focus {
 
  input, button, submit { border:none; }
 a {text-decoration: none}
+a:visited { text-decoration: none; color: inherit;}
+a:focus { text-decoration: none; color: inherit; }
+/* a:hover, a:active { text-decoration: none; color:black } */
 
 /*  ---------------- HEADER  ---------------- */
 .header {
   width: 100%;
-  height: 85px;
+  height: 65px;
   background: #b7f8fe;
   display: flex;
 }
 .header h1 {
   font-family: 'axisbold';
-  font-size: 55px;
+  font-size: 50px;
   letter-spacing: 5px;
   text-transform: uppercase;
   flex: 1;
@@ -89,7 +92,7 @@ a {text-decoration: none}
   width: 45px;
   height: 45px;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 9px;
   cursor: pointer;
 }
 .nav-dropdown{
@@ -341,7 +344,8 @@ input::placeholder {
 }
 
 
-/*  ---------------- CREATE CARD PAGE  ---------------- */
+/*  ---------------- CREATE CARD PAGE (front) ---------------- */
+
 .create-card h2 {
   text-align: center;
   top: 25px;
@@ -355,12 +359,126 @@ input::placeholder {
 .create-front{
   width: 310px;
   height: 450px;
-  background: blue;
+  background: #fcd9ed;
   margin: 0 auto;
   border-radius: 33px;
   position: relative;
   top: 60px;
+  font-family: 'Poppins', sans-serif;
 }
+.create-front-side-card{
+  position: relative;
+  top: 90px;
+}
+.create-front-side-card p{
+  text-align: center;
+  font-size: 25px;
+}
+.create-front-side-card form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.create-front-side-card form input {
+  width: 220px;
+  margin: 0 auto;
+  height: 55px;
+  border-radius: 15px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-front-side-card form input:nth-child(2){
+  width: 80px;
+  margin: 0 auto;
+  height: 44px;
+  border-radius: 9px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+.create-front-side-card form input:nth-child(2):hover {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+/*  ---------------- CREATE CARD PAGE (back) ---------------- */
+.create-back{
+  width: 310px;
+  height: 450px;
+  background: #b7f8fe;
+  margin: 0 auto;
+  border-radius: 33px;
+  position: relative;
+  top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-back-side-card{
+  position: relative;
+  top: 90px;
+}
+.create-back-side-card p{
+  text-align: center;
+  font-size: 25px;
+}
+.create-back-side-card form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  width: 185px;
+  margin: 0 auto;
+  height: 215px;
+  border-radius: 15px;
+  margin-top: 30px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+.create-back-side-card form input:nth-child(2){
+  width: 80px;
+  margin: 0 auto;
+  height: 44px;
+  border-radius: 9px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+.create-back-side-card form input:nth-child(2):hover {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Link to main menu in header */
 
