@@ -8,17 +8,18 @@ CREATE TABLE users(
     firstname VARCHAR,
     lastname VARCHAR
 );
-
+-- psql -d project_3_db 
+-- SELECT * FROM deck;
 DROP TABLE IF EXISTS deck;
 CREATE TABLE deck(
     id BIGSERIAL PRIMARY KEY,
-    question VARCHAR (255),
-    answer VARCHAR (255),
-    correct VARCHAR (255),
-    setTime VARCHAR UNIQUE NOT NULL,
-    timesRight VARCHAR UNIQUE NOT NULL,
-    timesWrong VARCHAR UNIQUE NOT NULL,
-    user_id INT REFERENCES users(id),
+    question TEXT,
+    answer TEXT,
+    correct BOOLEAN NOT NULL,
+    setTime VARCHAR NOT NULL,
+    timesRight INT NOT NULL,
+    timesWrong INT NOT NULL,
+    user_id INT REFERENCES users(id) NOT NULL,
     deckNumber INT NOT NULL
 )
 

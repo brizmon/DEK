@@ -4,8 +4,9 @@ const deckController = {};
 
 deckController.index = (req, res) => {
     Deck.findAll()
-    .then(card => {
-        console.log(`${card} is in index`);
+    .then(cards => {
+        // console.log(`${card} is in index`);
+        res.json(cards);
     })
     .catch(err => {
         console.log(err);
