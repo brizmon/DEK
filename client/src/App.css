@@ -65,6 +65,61 @@ button:focus {
 }
  input, button, submit { border:none; }  
 
+/*  ---------------- HEADER  ---------------- */
+.header {
+  width: 100%;
+  height: 85px;
+  background: pink;
+  display: flex;
+}
+.header h1 {
+  font-family: 'axisbold';
+  font-size: 70px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  flex: 1;
+  padding-left: 30px;
+  padding-top: 15px;
+}
+.nav {
+  background: blue;
+  border-radius: 83px;
+  width: 55px;
+  height: 55px;
+  margin-right: 20px;
+  margin-top: 15px;
+}
+.nav-dropdown{
+  background: aliceblue;
+  height: 100px;
+  position: relative;
+  top: 68px;
+  width: 120px;
+  right: 54px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.nav-dropdown:before{
+  border-width: 11px;
+    border-bottom-color: hsla(0,0%,80%,.6);
+    margin-left: -11px;
+    content: " ";
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: 100%;
+    pointer-events: none;
+    border: solid transparent;
+}
+.nav-link{
+  padding-top: 15px;
+}
+
+
+
+
+
 
 /*  ---------------- WELCOME PAGE  ---------------- */
 .card-tag {
