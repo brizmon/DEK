@@ -45,7 +45,6 @@ class CreateCard extends Component{
 
       <Header />
 
-
         <h2>Create a Card!</h2>
           <div className="create-front">
             <h3>Front Side</h3>

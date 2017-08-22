@@ -10,6 +10,7 @@ const Main = (props) => {
 
   return (
     <div className='main-menu'>
+
       <Header />
 
       <div className='menu-buttons'>
