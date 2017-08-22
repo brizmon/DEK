@@ -35,6 +35,7 @@ const QuizScreen = () => {
           <button className="delete-card">Delete</button>
         </div>
 
+          {this.renderCardPage()}
       </div>
     </div>
   )

@@ -97,7 +97,7 @@ class App extends Component {
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" component={UserProfile} />
             <Route exact path="/namedeck" component={NameDeck} />
-            <Route exact path="/createcard" component={CreateCard} />
+            <Route exact path="/createcard"  component={CreateCard} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
             {this.redirectTo()}
