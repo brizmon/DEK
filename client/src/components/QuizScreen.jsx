@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import Header from './Header';
+import Footer from './Footer';
+
 
 class QuizScreen extends Component{
 
@@ -48,13 +51,14 @@ class QuizScreen extends Component{
             <div className="next-card-arrow">
               <p>Arrow goes here</p>
             </div>
+            
+              <button className="edit-card">Edit</button>
+              <button className="delete-card">Delete</button>
 
-            <button className="edit-card">Edit</button>
-            <button className="delete-card">Delete</button>
-
-            <button className="right-card-button" onClick="booleantrue">right</button>
-            <button className="wrong-card-button" onClick="booleanwrong">wrong</button>
-          </div>
+              <button className="right-card-button" onClick="booleantrue">right</button>
+              <button className="wrong-card-button" onClick="booleanwrong">wrong</button>
+            </div>
+          <Footer />
         </div>
       )
     }

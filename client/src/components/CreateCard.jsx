@@ -2,10 +2,16 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import Header from './Header';
+import Footer from './Footer';
+
 class CreateCard extends Component{
   render(){
     return (
       <div className='create-card'>
+
+      <Header />
+
 
         <h2>Create a Card!</h2>
           <div className="create-front">
@@ -30,6 +36,8 @@ class CreateCard extends Component{
 
             </div>
           </div>
+
+        <Footer />
       </div>
     )
   }

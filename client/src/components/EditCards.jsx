@@ -1,10 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import Header from './Header';
+import Footer from './Footer';
+
 const EditCards = () => {
 
   return (
     <div className='edit-screen'>
+      <Header />
+
       <div className="edit-front-card">
         <div className="show-front">
           <p>Front of card to be edited... </p>
@@ -32,6 +37,8 @@ const EditCards = () => {
         </div>
 
       </div>
+
+      <Footer />
     </div>
   )
 }
