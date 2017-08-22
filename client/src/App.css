@@ -47,6 +47,15 @@ table {
 	border-spacing: 0;
 }
 
+/*  ---------------- FONTS  ---------------- */
+@font-face {
+    font-family: 'axisbold';
+    src: url('axis-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*  ---------------- GENERAL  ---------------- */
 input:focus,
 select:focus,
@@ -58,22 +67,58 @@ button:focus {
 
 
 /*  ---------------- WELCOME PAGE  ---------------- */
+.card-tag {
+  width: 300px;
+  height: 480px;
+  background: #394cfe;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(35deg);
+  box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
+  top: -205px;
+  left: 160px;
+}
+.card-tag-two{
+  width: 300px;
+  height: 480px;
+  background: #394cfe;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(140deg);
+  box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
+  top: 135px;
+  right: -129px;
+}
+.border{
+  color: #fec1fc;
+  border: 10px solid #fec1fc;
+  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #fec1fc 1%, #fec1fc 8%) 10;
+  height: 93vh;
+  width: 96%;
+  margin: 1%;
+  position: absolute;
+}
 .welcome {
-  height: 100vh;
   text-align: center;
+  background: white;
 }
 .welcome h1 {
   font-size: 100px;
   position: relative;
   top: 40px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'axisbold';
   letter-spacing: 5px;
+  text-transform: uppercase;
 }
 .welcome h2 {
   position: relative;
   top: 150px;
-  font-size: 35px;
+  font-size: 26px;
   font-family: 'Poppins', sans-serif;
+  color: #BDC3C7;
+  letter-spacing: .5px;
 }
 .auth-buttons {
   position: relative;
@@ -86,17 +131,18 @@ button:focus {
 .auth-buttons button {
   width: 190px;
   height: 60px;
-  background: #e9e754;
+  background: #fec1fc;
   border-radius: 50px;
   font-size: 22px;
   letter-spacing: 1px;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
+  color: white;
 }
 .auth-buttons button:hover {
-  background: #51cdcb;
-  color: #fff;
+  background: #b7f8fe;
+  color: black;
 }
 
 /*  ---------------- REGISTER PAGE  ---------------- */
