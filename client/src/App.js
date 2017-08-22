@@ -21,6 +21,14 @@ import axios from 'axios';
 
 class App extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      redirect: false,
+      redirecting: '',
+    }
+  }
+
   handleLoginSubmit = (e, username, password) => {
     e.preventDefault();
     axios.post('/auth/login', {
@@ -32,8 +40,7 @@ class App extends Component {
         auth: res.data.auth,
         user: res.data.user,
       });
-      window.location.href ='/main';
-      console.log(this.state)
+      this.handleRedirect('/main')
     }).catch(err => console.log(err));
   }
 
@@ -44,8 +51,21 @@ class App extends Component {
     })
     .then(res => {
       this.setState(options)
+      this.handleRedirect('/main')
     })
     .catch(err => console.log(err));
+  }
+
+
+  handleRedirect = (path) => {
+    this.setState({
+      redirect: !this.state.redirect,
+      redirecting: path,
+    })
+    this.setState({
+      redirect: !this.state.redirect,
+      redirecting: '',
+    })
   }
 
   logOut() {
@@ -58,12 +78,19 @@ class App extends Component {
       }).catch(err => console.log(err));
   }
 
+
+  // for rendering the path
+  redirectTo = () => {
+    if(this.state.redirect){
+      return(<Redirect to={this.state.redirecting}/>)
+    }
+  }
+
   render() {
     return (
       <Router>
         <div className="App">
           <div className="main">
-
             <Route exact path="/" render={() => <Welcome />} />
             <Route exact path="/main" render={() => <Main />} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
@@ -73,7 +100,7 @@ class App extends Component {
             <Route exact path="/createcard" component={CreateCard} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
-
+            {this.redirectTo()}
           </div>
         </div>
       </Router>
