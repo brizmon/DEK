@@ -146,32 +146,54 @@ button:focus {
 }
 
 /*  ---------------- REGISTER PAGE  ---------------- */
-.register-container {
-  height: 100vh;
-  background: #e9e754;
-}
-.register-container form {
-  width: 35%;
+.register-wrap {
+  width: 45%;
+  height: 65%;
+  background: #fec1fc;
   margin: 0 auto;
   position: relative;
-  top: 100px;
+  top: 111px;
+}
+.register-wrap h1 {
+  font-size: 100px;
+  text-align: center;
+  position: relative;
+  top: -37px;
+  font-family: 'Poppins', sans-serif;
+}
+.register-container {
+  height: 100vh;
+}
+.register-container form {
+  width: 55%;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 .register-container form input {
   margin-bottom: 20px;
-  height: 45px;
+  height: 33px;
   border-radius: 50px;
-  font-size: 25px;
-  text-align: center;
+  font-size: 16px;
   letter-spacing: 1px;
   font-family: 'Poppins', sans-serif;
+  padding-left: 25px;
 }
 .register-container form input:nth-child(6){
-  width: 140px;
+  width: 100px;
   margin: 0 auto;
+  padding-left: 0;
+  background: #b7f8fe;
+  color: black;
+  cursor: pointer;
+  font-weight: 600;
 }
-
+.register-container form input:nth-child(6):hover{
+  background: white;
+}
+input::placeholder {
+  color: #000;
+}
 /*  ---------------- LOG IN PAGE  ---------------- */
 .login-container {
   height: 100vh;
