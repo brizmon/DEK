@@ -59,6 +59,8 @@ app.use('/auth', authRoutes);
 const userRoutes = require('./routes/user-routes');
 app.use('/user', userRoutes);
 
+const deckRoutes = require('./routes/deck-routes.js');
+app.use('/decks', deckRoutes);
 
 
 

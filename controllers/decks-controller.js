@@ -1,9 +1,9 @@
-const Card = require('../models/deck.js');
+const Deck = require('../models/deck.js');
 const deckController = {};
 
 
 deckController.index = (req, res) => {
-    Card.findAll()
+    Deck.findAll()
     .then(card => {
         console.log(`${card} is in index`);
     })
@@ -24,6 +24,7 @@ deckController.create = (req, res) => {
         setTime: req.body.time,
         timesRight: req.body.timesRight,
         timesWrong: req.body.timesWrong,
+        deckNumber: req.body.deckNumber,
     })
     .then(card => {
         console.log(`Created ${card} in decks-controller`);
@@ -46,7 +47,7 @@ deckController.create = (req, res) => {
     })
 }
 
-deckController.update = (res, res) => {
+deckController.update = (req, res) => {
     Card.update({
         user_id: req.body.user_id,
         question: req.body.question,
@@ -79,5 +80,5 @@ deckController.delete = (req, res) => {
 }
 
 
-
+module.exports = deckController;
 

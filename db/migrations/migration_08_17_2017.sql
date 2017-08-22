@@ -18,7 +18,8 @@ CREATE TABLE deck(
     setTime VARCHAR UNIQUE NOT NULL,
     timesRight VARCHAR UNIQUE NOT NULL,
     timesWrong VARCHAR UNIQUE NOT NULL,
-    user_id INT REFERENCES users(id)
+    user_id INT REFERENCES users(id),
+    deckNumber INT NOT NULL
 )
 
 

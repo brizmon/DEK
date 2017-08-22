@@ -6,6 +6,7 @@ const Header = (props) => {
 
     return (
       <div className='header'>
+        
         <h1 className='header-link-to-main'><Link to="/main">DEK</Link></h1>
 
         <div className='nav'>

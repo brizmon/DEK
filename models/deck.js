@@ -4,18 +4,21 @@ const Deck = {};
 
 
 
-Deck.findAll = () =>{
-    return db.query('SELECT * FROM deck');
+Deck.findAll = (user_id) =>{
+    return db.query(`
+        SELECT * FROM deck
+        WHERE user_id = $1
+    `,[user_id]);
 }
 
 Deck.create = (deck) =>{
     return db.one(`
         INSERT INTO deck
-        (user_id, question, answer, correct, setTime, timesRight, timesWrong)
+        (user_id, question, answer, correct, setTime, timesRight, timesWrong, deckNumber)
         VALUES
-        ($1,$2,$3,$4,$5,$6,$7)
+        ($1,$2,$3,$4,$5,$6,$7, $8)
         RETURNING *
-    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong]);
+    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, deck.deckNumber]);
 }
 
 Deck.update = (deck, id) => {
@@ -27,10 +30,11 @@ Deck.update = (deck, id) => {
         correct = $4,
         setTime = $5,
         timesRight = $6,
-        timesWrong = $7
+        timesWrong = $7,
+        deckNumber = $9,
         WHERE id = $8
         RETURNING *
-    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, id]);
+    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, id, deck.deckNumber]);
 }
 
 Deck.delete = (id) => {
