@@ -76,7 +76,7 @@ a {text-decoration: none}
 }
 .header h1 {
   font-family: 'axisbold';
-  font-size: 70px;
+  font-size: 55px;
   letter-spacing: 5px;
   text-transform: uppercase;
   flex: 1;
@@ -86,8 +86,8 @@ a {text-decoration: none}
 .nav {
   background: black;
   border-radius: 83px;
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   margin-right: 20px;
   margin-top: 15px;
   cursor: pointer;
@@ -329,6 +329,27 @@ input::placeholder {
 .menu-button:hover {
    background: #b7f8fe;
    color: black;
+}
+
+/*  ---------------- CREATE CARD PAGE  ---------------- */
+.create-card h2 {
+  text-align: center;
+  top: 25px;
+  font-size: 30px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.create-front{
+  width: 310px;
+  height: 450px;
+  background: blue;
+  margin: 0 auto;
+  border-radius: 33px;
+  position: relative;
+  top: 60px;
 }
 
 /*Link to main menu in header */

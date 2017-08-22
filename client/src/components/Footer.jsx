@@ -4,7 +4,7 @@ class Header extends Component {
   render(){
     return (
       <div className='footer'>
-        <h2>Created by Brandon, Briseida, Dan & Ivan</h2>
+        <p>Created by Brandon, Briseida, Dan & Ivan</p>
       </div>
     )
   }
