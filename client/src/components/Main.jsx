@@ -13,7 +13,7 @@ const Main = (props) => {
       <Header />
 
       <div className="welcome-user-name">
-        <p>Welcome, {props.username}</p>
+        <p>Welcome, {props.firstname}</p>
       </div>
 
       <div className='menu-buttons'>

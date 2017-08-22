@@ -565,13 +565,18 @@ textarea {
 
 }
 
-.username {
-
+.user-profile h2 {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.scores {
-
+.user-profile-info {
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
 }
+
 
 /*Quiz Screen Component */
 

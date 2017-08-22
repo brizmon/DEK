@@ -92,10 +92,10 @@ class App extends Component {
           <div className="main">
 
             <Route exact path="/" render={() => <Welcome />} />
-            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} username={this.state.user.username}/>} />
+            <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} firstname={this.state.user.firstname}/>} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
-            <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} username={this.state.user.username}/>} />
+            <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
             <Route exact path="/namedeck" component={NameDeck} />
             <Route exact path="/createcard"  component={CreateCard} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
