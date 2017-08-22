@@ -99,7 +99,7 @@ class App extends Component {
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
             <Route exact path="/namedeck" component={NameDeck} />
-            <Route exact path="/createcard"  component={CreateCard} />
+            <Route exact path="/createcard"  render={() => <CreateCard state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
             <Route exact path="/editcards" component={EditCards} />
