@@ -13,6 +13,10 @@ const Main = (props) => {
 
       <Header />
 
+      <div className="welcome-user-name">
+        <p>Welcome, {props.username}</p>
+      </div>
+
       <div className='menu-buttons'>
         <button onClick={(e)=>props.handleRedirect('/createcard')} className='menu-button'>Create Card</button>
         <button onClick={(e)=>props.handleRedirect('/quizscreen')} className='menu-button'>Take Quiz</button>
