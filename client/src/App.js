@@ -37,6 +37,7 @@ class App extends Component {
       password,
     }).then(res => {
       console.log(res.data.user)
+    
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
@@ -51,6 +52,7 @@ class App extends Component {
       options
     })
     .then(res => {
+    
       this.setState(options)
       this.handleRedirect('/main')
     })

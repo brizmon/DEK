@@ -132,6 +132,16 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 /*  ---------------- WELCOME PAGE  ---------------- */
+.welcome-message {
+  width: 49%;
+  margin: 0 auto;
+  position: relative;
+}
+.welcome-user-name p{
+  font-family: 'Poppins', sans-serif;
+  font-size: 35px;
+  margin-top: 50px;
+}
 .card-tag {
   width: 300px;
   height: 480px;
@@ -141,7 +151,7 @@ a:focus { text-decoration: none; color: inherit; }
   z-index: 9;
   transform: rotate(35deg);
   box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
-  top: -205px;
+  top: -270px;
   left: 160px;
 }
 .card-tag-two{
@@ -172,7 +182,7 @@ a:focus { text-decoration: none; color: inherit; }
 .welcome h1 {
   font-size: 100px;
   position: relative;
-  top: 40px;
+  top: 65px;
   font-family: 'axisbold';
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -187,7 +197,7 @@ a:focus { text-decoration: none; color: inherit; }
 }
 .auth-buttons {
   position: relative;
-  top: 300px;
+  top: 220px;
   width: 40%;
   margin: 0 auto;
   display: flex;
@@ -324,7 +334,7 @@ input::placeholder {
   flex-wrap: wrap;
   justify-content: space-around;
   position: relative;
-  top: 170px;
+  top: 130px;
 }
 .menu-button{
   background: #fec1fc;
@@ -345,7 +355,11 @@ input::placeholder {
 
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
-
+.cards-container {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
 .create-card h2 {
   text-align: center;
   top: 25px;

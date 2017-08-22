@@ -46,50 +46,52 @@ class CreateCard extends Component{
       <Header />
 
         <h2>Create a Card!</h2>
-          <div className="create-front">
-            <div className="create-front-side-card">
-              <p>Write your question</p>
-              <form method="POST" onSubmit={this.handleFormSubmit}>
-                 <input
+          <div className="cards-container">
+            <div className="create-front">
+              <div className="create-front-side-card">
+                <p>Write your question</p>
+                <form method="POST" onSubmit={this.handleFormSubmit}>
+                  <input
+                    type="text"
+                    placeholder=" "
+                    name="question"
+                    value={this.state.question}
+                    onChange={this.handleInputChange}
+                  />
+
+                  <input
+
+                    className="save-front-side-card"
+                    type="submit"
+                    value="SUBMIT QUESTION"
+                  />
+                </form>
+
+              </div>
+            </div>
+
+            <div className="create-back">
+              <div className="create-back-side-card">
+                <form method="POST" onSubmit={this.handleFormSubmit}>
+
+                  <textarea
                   type="text"
                   placeholder=" "
-                  name="question"
-                  value={this.state.question}
+                  name="answer"
+                  value={this.state.answer}
                   onChange={this.handleInputChange}
-                />
+                  ></textarea>
 
-                <input
-
-                  className="save-front-side-card"
+                  <input
+                  className="save-back-side-card"
                   type="submit"
-                  value="SUBMIT QUESTION"
-                />
-              </form>
+                  value="save"
+                  />
+                </form>
+
+              </div>
 
             </div>
-          </div>
-
-           <div className="create-back">
-            <div className="create-back-side-card">
-              <form method="POST" onSubmit={this.handleFormSubmit}>
-
-                <textarea
-                type="text"
-                placeholder=" "
-                name="answer"
-                value={this.state.answer}
-                onChange={this.handleInputChange}
-                ></textarea>
-
-                <input
-                className="save-back-side-card"
-                type="submit"
-                value="save"
-                />
-              </form>
-
-            </div>
-
           </div>
 
         <Footer />
