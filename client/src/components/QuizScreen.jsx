@@ -68,7 +68,13 @@ class QuizScreen extends Component{
   }
   render(){
     return (
-      <div>{this.renderCardPage()}</div>
+      <div>
+        <Header />
+
+        <div>{this.renderCardPage()}</div>
+
+        <Footer />
+      </div>
     )
   }
 }
