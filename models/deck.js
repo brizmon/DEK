@@ -16,9 +16,9 @@ Deck.create = (deck) =>{
         INSERT INTO deck
         (user_id, question, answer, correct, setTime, timesRight, timesWrong, deckNumber)
         VALUES
-        ($1,$2,$3,$4,$5,$6,$7, $8)
+        ($1,$2,$3,FALSE,'',0,0,$4)
         RETURNING *
-    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, deck.deckNumber]);
+    `, [deck.user_id, deck.question, deck.answer, deck.deckNumber]);
 }
 
 Deck.update = (deck, id) => {

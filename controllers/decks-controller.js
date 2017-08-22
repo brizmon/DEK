@@ -16,8 +16,8 @@ deckController.index = (req, res) => {
 
 deckController.create = (req, res) => {
 
-    console.log("deck-controller, create from "+req.body);
-    Card.create({
+    // console.log(req.body)
+    Deck.create({
         user_id: req.body.user_id,
         question: req.body.question,
         answer: req.body.answer,
@@ -49,7 +49,7 @@ deckController.create = (req, res) => {
 }
 
 deckController.update = (req, res) => {
-    Card.update({
+    Deck.update({
         user_id: req.body.user_id,
         question: req.body.question,
         answer: req.body.answer,
@@ -70,7 +70,7 @@ deckController.update = (req, res) => {
 
 
 deckController.delete = (req, res) => {
-    Card.delete(req.params.id)
+    Deck.delete(req.params.id)
     .then(card => {
         console.log('We deleted ${card}')
     })

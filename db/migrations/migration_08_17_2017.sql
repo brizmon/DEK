@@ -8,6 +8,8 @@ CREATE TABLE users(
     firstname VARCHAR,
     lastname VARCHAR
 );
+
+
 -- psql -d project_3_db 
 -- SELECT * FROM deck;
 DROP TABLE IF EXISTS deck;
