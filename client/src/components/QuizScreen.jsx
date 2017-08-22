@@ -18,7 +18,7 @@ class QuizScreen extends Component{
   }
 
   handleCardPage(){
-  axios.get('/allcards')
+  axios.get('/decks')
     .then(res => {
       this.setState({
         thestuff: res.data,
@@ -37,9 +37,8 @@ class QuizScreen extends Component{
               <p>Front of card goes here </p>
             </div>
 
-            <div className="edit-delete">
-              <button className="edit-card-button">Edit</button>
-              <button className="delete-card-button">Delete</button>
+            <div className="edit">
+              <button className="edit-card-button" onClick="openitsform">Edit</button>
             </div>
           </div>
 
@@ -51,13 +50,14 @@ class QuizScreen extends Component{
             <div className="next-card-arrow">
               <p>Arrow goes here</p>
             </div>
-            
-              <button className="edit-card">Edit</button>
-              <button className="delete-card">Delete</button>
 
-              <button className="right-card-button" onClick="booleantrue">right</button>
-              <button className="wrong-card-button" onClick="booleanwrong">wrong</button>
+              <button className="edit-card" onClick="openbackcreateform">Edit</button>
+
+              <button className="right-card-button" onClick="booleantrue andnext">right</button>
+              <button className="wrong-card-button" onClick="booleanwrong andnext">wrong</button>
             </div>
+            <button className="delete-card" onClick="deletecard">Delete</button>
+
           <Footer />
         </div>
       )
