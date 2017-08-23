@@ -203,10 +203,12 @@ a:focus { text-decoration: none; color: inherit; }
 .welcome h2 {
   position: relative;
   top: 150px;
-  font-size: 26px;
+  font-size: 21px;
   font-family: 'Poppins', sans-serif;
   color: #BDC3C7;
-  letter-spacing: .5px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  line-height: 37px;
 }
 .auth-buttons {
   position: relative;
@@ -383,6 +385,12 @@ input::placeholder {
   font-weight: 600;
   letter-spacing: 2px;
 }
+.create-card > p{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  top: 30px;
+}
 .create-front{
   width: 310px;
   height: 450px;
@@ -395,7 +403,7 @@ input::placeholder {
 }
 .create-front-side-card{
   position: relative;
-  top: 90px;
+  top: 50px;
 }
 .create-front-side-card p{
   text-align: center;
@@ -447,7 +455,7 @@ input::placeholder {
 }
 .create-back-side-card{
   position: relative;
-  top: 90px;
+  top: 50px;
 }
 .create-back-side-card p{
   text-align: center;
@@ -549,17 +557,146 @@ textarea {
 .pickquiz-button p {
   position: relative;
   top: 17px;
-  color: black;
+  color: white;
 }
 .quiz_link{
    font-size: 25px;
    font-weight: 600;
-    letter-spacing: 2px;
-    padding-bottom: 7px;
+   letter-spacing: 2px;
+   padding-bottom: 7px;
 }
 .pickquiz-button:hover {
-   color: black;
-   background: #b7f8fe;
+  color: black;
+  background: #b7f8fe;
+}
+
+
+/*  ---------------- EDIT CARD PAGE (front) ---------------- */
+.cards-container {
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+}
+.create-card h2 {
+  text-align: center;
+  top: 25px;
+  font-size: 30px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.create-card > p{
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  top: 30px;
+}
+.create-front{
+  width: 310px;
+  height: 450px;
+  background: #fcd9ed;
+  margin: 0 auto;
+  border-radius: 33px;
+  position: relative;
+  top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-front-side-card{
+  position: relative;
+  top: 50px;
+}
+.create-front-side-card p{
+  text-align: center;
+  font-size: 25px;
+}
+.create-front-side-card form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.create-front-side-card form input {
+  width: 220px;
+  margin: 0 auto;
+  height: 55px;
+  border-radius: 15px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-front-side-card form input:nth-child(2){
+  width: 80px;
+  margin: 0 auto;
+  height: 44px;
+  border-radius: 9px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+.create-front-side-card form input:nth-child(2):hover {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+/*  ---------------- EDIT CARD PAGE (back) ---------------- */
+.create-back{
+  width: 310px;
+  height: 450px;
+  background: #b7f8fe;
+  margin: 0 auto;
+  border-radius: 33px;
+  position: relative;
+  top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-back-side-card{
+  position: relative;
+  top: 50px;
+}
+.create-back-side-card p{
+  text-align: center;
+  font-size: 25px;
+}
+.create-back-side-card form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  width: 185px;
+  margin: 0 auto;
+  height: 215px;
+  border-radius: 15px;
+  margin-top: 30px;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+.create-back-side-card form input:nth-child(2){
+  width: 80px;
+  margin: 0 auto;
+  height: 44px;
+  border-radius: 9px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: black;
+  color: white;
+}
+.create-back-side-card form input:nth-child(2):hover {
+  background: white;
+  color: black;
+  font-weight: 600;
 }
 
 
