@@ -1,46 +1,67 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
+import axios from 'axios';
+import Card from './Card.jsx';
 
-const EditCards = () => {
 
-  return (
-    <div className='edit-screen'>
-      <Header />
 
-      <div className="edit-front-card">
-        <div className="show-front">
-          <p>Front of card to be edited... </p>
+
+class EditCards extends Component{
+  constructor(){
+    super();
+    this.state = {
+      gotCards: false,
+    }
+  }
+
+  getCards = () => {
+    let cards = [];
+    // fetch to backend /decks
+    console.log(this.props.state.user.id)
+    axios.get('/decks', {
+      user_id: this.props.state.user.id
+    })
+    .then(res => {
+      console.log(res.data);
+      // put all cards into array of tags
+      for(let j = 0; j < res.data.length; ++j){
+        cards.push(
+          <Card card={res.data[j]}/>
+        )
+      }
+      this.setState({
+        cards: cards,
+        gotCards: true,
+      })
+    })
+  }
+  
+  componentDidMount(){
+    this.getCards();
+  }
+  
+
+  // display all cards
+  render(){
+    if(this.state.gotCards){
+      return (
+        <div className='edit-screen'>
+          <Header />
+          {this.state.cards}
+          <Footer />
         </div>
-
-        <div className="edit-delete">
-          <button className="edit-card-button">Edit</button>
-          <button className="delete-card-button">Delete</button>
-        </div>
+      )
+    }
+    return(
+      <div>
+        Loading...
       </div>
-
-      <div className="edit-back-card">
-
-        <div className="show-back">
-           <p>Back of card to be edited...</p>
-        </div>
-
-        <div className="next-card-arrow">
-          <p>Arrow goes here</p>
-        </div>
-
-        <div className="edit-delete">
-          <button className="edit-card">Edit</button>
-          <button className="delete-card">Delete</button>
-        </div>
-
-      </div>
-
-      <Footer />
-    </div>
-  )
+    )
+  }
+  
 }
 
 export default EditCards;

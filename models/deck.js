@@ -7,7 +7,7 @@ const Deck = {};
 Deck.findAll = (user_id) =>{
     return db.query(`
         SELECT * FROM deck
-        WHERE user_id = 1
+        WHERE user_id = $1
     `,[user_id]);
 }
 

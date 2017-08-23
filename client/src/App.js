@@ -101,7 +101,7 @@ class App extends Component {
             <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
-            <Route exact path="/editcards" component={EditCards} />
+            <Route exact path="/editcards" render={() => <EditCards handleRedirect={this.handleRedirect} state={this.state} />} />
             {this.redirectTo()}
 
           </div>
