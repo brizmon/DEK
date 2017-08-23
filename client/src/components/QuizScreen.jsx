@@ -5,6 +5,7 @@ import axios from 'axios';
 import Header from './Header';
 import Footer from './Footer';
 
+import QuizCardShow from './QuizCardShow';
 
 class QuizScreen extends Component{
 
