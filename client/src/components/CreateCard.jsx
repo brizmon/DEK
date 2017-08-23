@@ -37,7 +37,7 @@ class CreateCard extends Component{
     })
     .then(res => {
       console.log(res);
-      // document.querySelectorAll
+      this.props.handleRedirect('/main')
     })
     .catch(err => console.log(err));
   }
