@@ -51,7 +51,6 @@ class App extends Component {
       options
     })
     .then(res => {
-
       this.setState(options)
       this.handleRedirect('/main')
     })
@@ -60,13 +59,11 @@ class App extends Component {
 
   handleRedirect = (path) => {
     this.setState({
-      redirect: !this.state.redirect,
+      redirect: true,
       redirecting: path,
     })
     console.log(`The path is: ` + path)
-    this.setState({
-      redirect: !this.state.redirect,
-    })
+    
   }
 
   logOut() {
@@ -82,6 +79,10 @@ class App extends Component {
   // for rendering the path
   redirectTo = () => {
     if(this.state.redirect){
+      console.log('redirect')
+      this.setState({
+        redirect: false,
+      })
       return(<Redirect to={this.state.redirecting}/>)
     }
   }
@@ -97,7 +98,7 @@ class App extends Component {
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
-            <Route exact path="/createcard"  render={() => <CreateCard state={this.state} />} />
+            <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
             <Route exact path="/editcards" component={EditCards} />

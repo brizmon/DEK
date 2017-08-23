@@ -37,6 +37,7 @@ class CreateCard extends Component{
     })
     .then(res => {
       console.log(res);
+      // document.querySelectorAll
     })
     .catch(err => console.log(err));
   }
