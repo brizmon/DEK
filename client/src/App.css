@@ -502,5 +502,45 @@ textarea {
   font-size: 18px;
 }
 
+/*  ---------------- QUIZ PAGE ---------------- */
+.pick-quiz-type h2{
+  text-align: center;
+  top: 25px;
+  font-size: 30px;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.pickquiz-form{
+  width: 600px;
+  height: 40vh;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  top: 130px;
+}
 
-
+.pickquiz-button{
+  background: #fec1fc;
+  flex: 250px 0;
+  border-radius: 15px;
+  height: 85px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: white;
+}
+.pickquiz-button:hover {
+   background: #b7f8fe;
+   color: black;
+}
+.pickquiz-button p {
+  font-size: 15px;
+  font-weight: 100;
+}
