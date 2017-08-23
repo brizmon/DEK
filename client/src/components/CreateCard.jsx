@@ -27,17 +27,18 @@ class CreateCard extends Component{
 
   handleFormSubmit(e) {
     e.preventDefault();
+    // console.log(this.state);
     axios.post('/decks', {
-        question: this.props.state.question,
-        answer: this.props.state.answer,
+        question: this.state.question,
+        answer: this.state.answer,
         user_id: this.props.state.user.id,
+        // allow modified deck number later
         deckNumber: 1,
     })
     .then(res => {
       console.log(res);
     })
     .catch(err => console.log(err));
-    e.target.reset();
   }
 
   render(){
@@ -60,12 +61,6 @@ class CreateCard extends Component{
                     onChange={this.handleInputChange}
                   />
 
-                  <input
-
-                    className="save-front-side-card"
-                    type="submit"
-                    value="SUBMIT QUESTION"
-                  />
                 </form>
 
               </div>
@@ -87,6 +82,7 @@ class CreateCard extends Component{
                   className="save-back-side-card"
                   type="submit"
                   value="save"
+                  onClick={this.handleFormSubmit}
                   />
                 </form>
 
