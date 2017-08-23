@@ -12,7 +12,6 @@ import Login from './components/Login';
 
 import Main from './components/Main';
 import UserProfile from './components/UserProfile';
-import NameDeck from './components/NameDeck';
 import CreateCard from './components/CreateCard';
 import PickQuizType from './components/PickQuizType';
 import QuizScreen from './components/QuizScreen';
@@ -37,7 +36,7 @@ class App extends Component {
       password,
     }).then(res => {
       console.log(res.data.user)
-    
+
       this.setState({
         auth: res.data.auth,
         user: res.data.user,
@@ -52,7 +51,7 @@ class App extends Component {
       options
     })
     .then(res => {
-    
+
       this.setState(options)
       this.handleRedirect('/main')
     })
@@ -98,7 +97,6 @@ class App extends Component {
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
             <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
-            <Route exact path="/namedeck" component={NameDeck} />
             <Route exact path="/createcard"  render={() => <CreateCard state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" component={QuizScreen} />
