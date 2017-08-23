@@ -39,14 +39,23 @@ deckController.create = (req, res) => {
 
 
 deckController.findById = (req, res) => {
-
+    Deck.findById(req.params.id)
+    .then(card => {
+        console.log(card);
+        res.json(card);
+    })
+    .catch(err => {
+        res.status(500).json(err);
+    })
 }
 
 deckController.update = (req, res) => {
     Deck.update({
         user_id: req.body.user_id,
+        // for edit these two change
         question: req.body.question,
         answer: req.body.answer,
+        // for quiz result update, these change
         correct: req.body.correct,
         setTime: req.body.time,
         timesRight: req.body.timesRight,
