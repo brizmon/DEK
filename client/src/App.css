@@ -86,6 +86,9 @@ a:focus { text-decoration: none; color: inherit; }
   padding-left: 30px;
   padding-top: 10px;
 }
+.header h1 a:hover {
+  color: white;
+}
 .nav {
   background: black;
   border-radius: 83px;
@@ -523,24 +526,30 @@ textarea {
   position: relative;
   top: 130px;
 }
-
 .pickquiz-button{
   background: #fec1fc;
   flex: 250px 0;
   border-radius: 15px;
   height: 85px;
   cursor: pointer;
-  font-size: 25px;
   font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  letter-spacing: 2px;
   color: white;
-}
-.pickquiz-button:hover {
-   background: #b7f8fe;
-   color: black;
+  text-align: center;
 }
 .pickquiz-button p {
-  font-size: 15px;
-  font-weight: 100;
+  position: relative;
+  top: 17px;
+  color: black;
 }
+.quiz_link{
+   font-size: 25px;
+   font-weight: 600;
+    letter-spacing: 2px;
+    padding-bottom: 7px;
+}
+.pickquiz-button:hover {
+   color: black;
+   background: #b7f8fe;
+}
+
+
