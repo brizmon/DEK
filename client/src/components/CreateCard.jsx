@@ -49,19 +49,19 @@ class CreateCard extends Component{
       <Header />
 
         <h2>Create a Card!</h2>
-        <p>When you're done, click DEK above to return home</p>
+        <p>When you're done creating cards, click DEK above to return home</p>
           <div className="cards-container">
             <div className="create-front">
               <div className="create-front-side-card">
                 <p>Write your question</p>
                 <form method="POST" onSubmit={this.handleFormSubmit}>
-                  <input
+                  <textarea
                     type="text"
                     placeholder=" "
                     name="question"
                     value={this.state.question}
                     onChange={this.handleInputChange}
-                  />
+                  ></textarea>
 
                 </form>
 
