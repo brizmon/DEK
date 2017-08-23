@@ -98,8 +98,8 @@ a:focus { text-decoration: none; color: inherit; }
   margin-top: 9px;
   cursor: pointer;
 }
-.nav-dropdown{
-  background: aliceblue;
+
+.nav-dropdown {
   height: 100px;
   position: relative;
   top: 68px;
@@ -110,11 +110,21 @@ a:focus { text-decoration: none; color: inherit; }
   text-align: center;
 /*  opacity: 0;*/
 }
-.nav-link{
+
+.nav-link {
+  display: none;
   padding-top: 15px;
   font-family: 'Poppins', sans-serif;
-
 }
+
+.nav:hover .nav-link {
+  display: block;
+}
+
+.nav:hover .nav-dropdown {
+  background-color: #BDC3C7;
+}
+
 
 /*  ---------------- FOOTER  ---------------- */
 .footer {
