@@ -83,7 +83,7 @@ a:focus { text-decoration: none; color: inherit; }
 .header {
   width: 100%;
   height: 65px;
-  background: white;
+  background: #F2EEE2;
   display: flex;
   position: fixed;
   z-index: 9;
@@ -98,7 +98,7 @@ a:focus { text-decoration: none; color: inherit; }
   padding-top: 10px;
 }
 .header h1 a:hover {
-  color: #394cfe;
+  color: #F81B84;
 }
 
 .nav {
@@ -141,7 +141,8 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 .nav:hover .nav-dropdown {
-  background-color: #BDC3C7;
+  background-color: #F81B84;
+  color: #F2EEE2;
 }
 
 
@@ -153,7 +154,7 @@ a:focus { text-decoration: none; color: inherit; }
   position: absolute;
   bottom: 0;
   text-align: center;
-  color: #fec1fc;
+  color: #F5CE28;
 }
 .footer p {
   padding-top: 10px;
@@ -396,7 +397,7 @@ input::placeholder {
 .create-card {
   height: 100vh;
   position: relative;
-  background: #394cfe;
+  background: #43C0F6;
 }
 .cards-container {
   display: flex;
@@ -424,7 +425,7 @@ input::placeholder {
 .create-front{
   width: 310px;
   height: 450px;
-  background: #ECF0F1;
+  background: #F2EEE2;
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
@@ -466,17 +467,17 @@ input::placeholder {
   background: black;
   color: white;
 }
-.create-front-side-card form input:nth-child(2):hover {
-  background: white;
+/*.create-front-side-card form input:nth-child(2):hover {
+  background: #F5CE28;
   color: black;
   font-weight: 600;
-}
+}*/
 
 /*  ---------------- CREATE CARD PAGE (back) ---------------- */
 .create-back{
   width: 310px;
   height: 450px;
-  background: #ECF0F1;
+  background: #F2EEE2;
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
@@ -518,11 +519,11 @@ textarea {
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
-  background: black;
+  background: #F81B84;
   color: white;
 }
 .create-back-side-card form input:nth-child(2):hover {
-  background: white;
+  background: #F5CE28;
   color: black;
   font-weight: 600;
 }

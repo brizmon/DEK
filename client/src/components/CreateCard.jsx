@@ -49,7 +49,6 @@ class CreateCard extends Component{
       <Header />
 
         <h2>Create a Card!</h2>
-        <p>When you're done creating cards, click DEK above to return home</p>
           <div className="cards-container">
             <div className="create-front">
               <div className="create-front-side-card">
