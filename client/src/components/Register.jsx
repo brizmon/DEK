@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-
-
 class Register extends Component{
 
     handleInputChange = (e) => {
@@ -12,7 +10,6 @@ class Register extends Component{
         });
     }
 
-      
 
     render(){
         return(

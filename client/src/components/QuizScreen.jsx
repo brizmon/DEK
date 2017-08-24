@@ -7,8 +7,6 @@ import Card from './Card.jsx';
 import FrontOfCard from './FrontOfCard.jsx'
 import BackOfCard from './BackOfCard.jsx'
 
-
-
 class QuizScreen extends Component{
   constructor(){
     super();
@@ -21,8 +19,6 @@ class QuizScreen extends Component{
 
   getCards = () => {
     let cards = [];
-    // fetch to backend /decks
-    // console.log(this.props.state.user.id)
     axios.get('/decks', {
       user_id: this.props.state.user.id
     })
@@ -45,7 +41,6 @@ class QuizScreen extends Component{
     this.getCards();
   }
 
-
   rotateCard=()=>{
     this.setState({
       frontOfCard: !this.state.frontOfCard,
@@ -57,7 +52,6 @@ class QuizScreen extends Component{
         currentCard: this.state.currentCard+1,
       })
   }
-
 
   decideWhichSideOfCard = () => {
     if(this.state.currentCard < this.state.cards.length){

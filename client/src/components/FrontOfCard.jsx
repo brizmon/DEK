@@ -7,22 +7,21 @@ class FrontOfCard extends Component{
             didMount: false,
         }
     }
+
     componentDidMount(){
         this.setState({
-            user_id: this.props.card.user_id, 
-            question: this.props.card.question, 
-            answer: this.props.card.answer, 
-            correct: this.props.card.correct, 
-            setTime: this.props.card.settime, 
-            timesRight: this.props.card.timesright, 
-            timesWrong: this.props.card.timeswrong, 
+            user_id: this.props.card.user_id,
+            question: this.props.card.question,
+            answer: this.props.card.answer,
+            correct: this.props.card.correct,
+            setTime: this.props.card.settime,
+            timesRight: this.props.card.timesright,
+            timesWrong: this.props.card.timeswrong,
             deckNumber: this.props.card.decknumber,
             didMount: true,
             id: this.props.card.id,
         })
     }
-
-
 
     handleInputChange = (e) => {
         const name=e.target.name;
@@ -51,7 +50,7 @@ class FrontOfCard extends Component{
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <button className="rotate_button" onClick={this.props.rotateCard}>Flip Card</button>
                 </div>
             )
@@ -59,9 +58,9 @@ class FrontOfCard extends Component{
         return(
             <div>
                 Loading...
-            </div>    
+            </div>
         )
-        
+
     }
 }
 

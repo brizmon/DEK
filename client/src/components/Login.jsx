@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-
-
 class Login extends Component{
 
     handleInputChange = (e) => {
@@ -11,8 +9,6 @@ class Login extends Component{
             [name]: value,
         });
     }
-
-      
 
     render(){
         return(
@@ -26,9 +22,9 @@ class Login extends Component{
                         <input type="password" name='password' placeholder='Password'
                         onChange={(e)=>this.handleInputChange(e)}/>
                         <input onClick={(e)=>this.props.handleLoginSubmit(e,this.state.userName, this.state.password)} type="submit" value='Submit'/>
-                    </form>  
+                    </form>
                 </div>
-            </div> 
+            </div>
         )
     }
 }

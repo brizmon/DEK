@@ -195,10 +195,10 @@ a:focus { text-decoration: none; color: inherit; }
   top: 135px;
   right: -129px;
 }
+
 .border{
   color: #fec1fc;
-  border: 10px solid #fec1fc;
-  border-image: repeating-linear-gradient( 45deg, #f81b84 , #f81b84 1%, #f5ce28 1%, #f5ce28 8%) 10;
+  border: 10px solid #F5CE28;
   height: 93vh;
   width: 96%;
   margin: 1%;
@@ -255,7 +255,7 @@ a:focus { text-decoration: none; color: inherit; }
 .register-wrap {
   width: 45%;
   height: 65%;
-  background: #f81b84;
+  background: #43C0F6;
   margin: 0 auto;
   position: relative;
   top: 111px;
@@ -318,6 +318,7 @@ input::placeholder {
 }
 .login-container {
   height: 100vh;
+  background-color: #43C0F6;
 }
 .login-container form {
   width: 55%;
@@ -325,6 +326,7 @@ input::placeholder {
   display: flex;
   flex-direction: column;
 }
+
 .login-container form input {
   margin-bottom: 20px;
   height: 33px;
@@ -484,14 +486,9 @@ input::placeholder {
   background: black;
   color: white;
 }
-/*.create-front-side-card form input:nth-child(2):hover {
-  background: #F5CE28;
-  color: black;
-  font-weight: 600;
-}*/
 
 /*  ---------------- CREATE CARD PAGE (back) ---------------- */
-.create-back{
+.create-back {
   width: 310px;
   height: 450px;
   background: #F2EEE2;
@@ -758,4 +755,42 @@ textarea {
   position: relative;
   top: -397px;
   display: block;
+}
+
+.create-back-quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+  height: 450px;
+  background: #F2EEE2;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10vh;
+}
+
+.right-wrong {
+  display: flex;
+  flex-direction: row;
+  margin-top: 350px;
+}
+
+.correct-button {
+  padding: 0 10px 0 10px;
+  width: 105px;
+  margin: 0 auto;
+  height: 45px;
+  border-radius: 9px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  color: black;
+  position: relative;
+  background-color: #F81B84;
+  display: block;
+  align-items: center;
 }
