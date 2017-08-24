@@ -42,7 +42,6 @@ class FrontOfCard extends Component{
             return(
                 <div>
                     {/*http://fontawesome.io/icon/arrow-circle-o-right/*/}
-                    <button onClick={this.props.rotateCard}>Flip</button>
                     <div className="cards-container">
                         <div className="create-front">
                             <div className="create-front-side-card">
@@ -52,6 +51,7 @@ class FrontOfCard extends Component{
                     </div>
                     <button>Edit</button>
                     <button>Delete</button>
+                    <button className="rotate_button" onClick={this.props.rotateCard}>Flip</button>
                 </div>
             )
         }

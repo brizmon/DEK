@@ -202,7 +202,7 @@ a:focus { text-decoration: none; color: inherit; }
 .border{
   color: #fec1fc;
   border: 10px solid #fec1fc;
-  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #fec1fc 1%, #fec1fc 8%) 10;
+  border-image: repeating-linear-gradient( 45deg, #f81b84 , #f81b84 1%, #f5ce28 1%, #f5ce28 8%) 10;
   height: 93vh;
   width: 96%;
   margin: 1%;
@@ -241,7 +241,7 @@ a:focus { text-decoration: none; color: inherit; }
 .auth-buttons button {
   width: 190px;
   height: 60px;
-  background: #fec1fc;
+  background: #f81b84;
   border-radius: 50px;
   font-size: 22px;
   letter-spacing: 1px;
@@ -251,7 +251,7 @@ a:focus { text-decoration: none; color: inherit; }
   color: white;
 }
 .auth-buttons button:hover {
-  background: #b7f8fe;
+  background: #f5ce28;
   color: black;
 }
 
@@ -259,7 +259,7 @@ a:focus { text-decoration: none; color: inherit; }
 .register-wrap {
   width: 45%;
   height: 65%;
-  background: #394cfe;
+  background: #f81b84;
   margin: 0 auto;
   position: relative;
   top: 111px;
@@ -293,7 +293,7 @@ a:focus { text-decoration: none; color: inherit; }
   width: 100px;
   margin: 0 auto;
   padding-left: 0;
-  background: #b7f8fe;
+  background: #f5ce28;
   color: black;
   cursor: pointer;
   font-weight: 600;
@@ -308,7 +308,7 @@ input::placeholder {
 .login-wrap {
   width: 45%;
   height: 45%;
-  background: #394cfe;
+  background: #f81b84;
   margin: 0 auto;
   position: relative;
   top: 111px;
@@ -342,7 +342,7 @@ input::placeholder {
   width: 100px;
   margin: 0 auto;
   padding-left: 0;
-  background: #b7f8fe;
+  background: #f5ce28;
   color: black;
   cursor: pointer;
   font-weight: 600;
@@ -530,14 +530,19 @@ textarea {
 
 
 /*  ---------------- USER PROFILE PAGE ---------------- */
+.user-profile{
+  height: 100vh;
+  position: relative;
+}
 .user-profile-info{
   width: 50%;
+  position: relative;
+  top: 95px;
   height: 500px;
   border: 10px solid #fec1fc;
   margin: 0 auto;
   text-align: center;
-  margin-top: 30px;
-  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #fec1fc 1%, #fec1fc 8%) 10;
+  border-image: repeating-linear-gradient( 45deg, #f81b84 , #f81b84 1%, #f5ce28 1%, #f5ce28 8%) 10;
 }
 .user-profile-info h2 {
   font-family: 'Poppins', sans-serif;
@@ -558,7 +563,7 @@ textarea {
 .pick-quiz-type {
   height: 100vh;
   position: relative;
-  background: #f5f8f9;
+  background: #46bff7;
 }
 .pick-quiz-type h2{
   text-align: center;
@@ -576,15 +581,13 @@ textarea {
   top: 165px;
 }
 .pickquiz-button{
-  border: 10px solid;
   flex: 50% 0;
-  height: 65vh;
+  height: 68vh;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
-  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #fec1fc 1%, #fec1fc 8%) 10;
-  background: #fec1fc;
+  background: #f81b84;
 }
 .pickquiz-button p{
   position: relative;
@@ -602,11 +605,11 @@ textarea {
    padding-bottom: 7px;
 }
 .button_two{
-  background: #394cfe;
+  background: #f5ce28;
 }
 .pickquiz-button:hover {
   color: black;
-  background: #b7f8fe;
+  background: #f2eee2;
 }
 
 
@@ -635,4 +638,9 @@ textarea {
   position: relative;
   top: 65px;
   padding-bottom: 50px;
+}
+
+/*  ---------------- QUIZ SCREEN PAGE ---------------- */
+.rotate_button {
+  background: red;
 }
