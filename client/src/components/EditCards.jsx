@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -45,14 +44,20 @@ class EditCards extends Component{
   render(){
     if(this.state.gotCards){
       return (
+
         <div className='edit-screen'>
           <Header />
-          <h2>Edit your Cards!</h2>
-          <div className="edit-cards-main">
-            {this.state.cards}
+
+          <div className="edit-container">
+
+            <h2>Edit your Cards!</h2>
+            <div className="edit-cards-main">
+              {this.state.cards}
+
+            </div>
           </div>
-          <Footer />
         </div>
+
       )
     }
     return(

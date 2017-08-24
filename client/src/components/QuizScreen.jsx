@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -41,7 +40,7 @@ class QuizScreen extends Component{
       })
     })
   }
-  
+
   componentDidMount(){
     this.getCards();
   }
@@ -52,7 +51,7 @@ class QuizScreen extends Component{
       frontOfCard: !this.state.frontOfCard,
     })
   }
-  
+
   getNextCard = () => {
       this.setState({
         currentCard: this.state.currentCard+1,
@@ -94,7 +93,7 @@ class QuizScreen extends Component{
       </div>
     )
   }
-  
+
 }
 
 export default QuizScreen;

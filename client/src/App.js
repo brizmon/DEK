@@ -3,9 +3,6 @@ import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import { Redirect } from 'react-router';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-
 import Welcome from './components/Welcome';
 import Register from './components/Register';
 import Login from './components/Login';
@@ -71,7 +68,7 @@ class App extends Component {
       redirecting: path,
     })
     console.log(`The path is: ` + path)
-    
+
   }
 
   logOut() {
