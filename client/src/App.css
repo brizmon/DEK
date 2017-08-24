@@ -810,22 +810,20 @@ textarea {
 }
 
 .right-wrong {
-  
-}
-
-.correct-button {
-  padding: 0 10px 0 10px;
-  width: 105px;
-  margin: 0 auto;
-  height: 45px;
-  border-radius: 9px;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
-  color: black;
+  width: 20%;
+  height: 50px;
+  background: red;
+  margin: auto;
   position: relative;
-  background-color: #F81B84;
-  display: block;
-  align-items: center;
+  top: 70px;
+  text-align: center;
+}
+.right-wrong button {
+  background: blue;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.correct-button {
+  
 }
