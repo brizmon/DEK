@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
-
 const Header = (props) => {
 
     return (
@@ -10,10 +9,18 @@ const Header = (props) => {
         <h1 className='header-link-to-main'><Link to="/main">DEK</Link></h1>
 
         <div className='nav'>
+
+          <div className='bars'>
+            <p>-</p>
+            <p>-</p>
+            <p>-</p>
+          </div>
+
           <div className="nav-dropdown">
             <Link className='nav-link' Link to="/userprofile">My Profile</Link>
             <Link className='nav-link' Link to="/">Log out</Link>
           </div>
+
         </div>
 
       </div>
