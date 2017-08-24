@@ -40,6 +40,26 @@ class EditCards extends Component{
   }
 
 
+  showEditCards = () => {
+    if(this.state.cards.length > 0)
+    {
+      return(
+        <div>
+          <h2>Edit your Cards!</h2>
+          <div className="edit-cards-main">
+            {this.state.cards}
+          </div>
+        </div>
+      )
+    }
+    return(
+      <div className="edit-cards-main">
+        <h1>You have no cards</h1>
+      </div>
+    )
+  }
+
+
   // display all cards
   render(){
     if(this.state.gotCards){
@@ -49,12 +69,7 @@ class EditCards extends Component{
           <Header />
 
           <div className="edit-container">
-
-            <h2>Edit your Cards!</h2>
-            <div className="edit-cards-main">
-              {this.state.cards}
-
-            </div>
+            {this.showEditCards()}
           </div>
           <Footer />
         </div>

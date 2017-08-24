@@ -81,9 +81,21 @@ class QuizScreen extends Component{
     return(
       <div className='scoreScreen'>
         <h1>Finished Quiz</h1>
-        <h1>Score: {this.state.numberCorrect*100/(this.state.numberCorrect+this.state.numberWrong)}%</h1>
+        {this.displayScore()}
       </div>
     )
+  }
+
+  displayScore = () => {
+    if(this.state.cards > 0){
+      return (
+        <h1>Score: {this.state.numberCorrect*100/(this.state.numberCorrect+this.state.numberWrong)}%</h1>
+      )
+    }
+    return(
+      <h1>You have no cards</h1>
+    )
+    
   }
 
   // display all cards
