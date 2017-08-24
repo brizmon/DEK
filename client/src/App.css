@@ -412,15 +412,41 @@ input::placeholder {
 
 /*  ---------------- ABOUT APP PAGE ---------------- */
 
-.about-app {
+.about-app{
   height: 100vh;
   position: relative;
   background-color: #43C0F6;
 }
 
 .about-app-message {
-  color: black;
-  font-size: 20px;
+  top: 100px;
+  line-height: 1.5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+  position: relative;
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #F2EEE2;
+  overflow: scroll;
+  border: 10px solid #F5CE28;
+}
+
+.about-app-message h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.about-app-message p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
@@ -825,5 +851,5 @@ textarea {
   border-radius: 50%;
 }
 .correct-button {
-  
+
 }
