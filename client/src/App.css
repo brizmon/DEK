@@ -171,30 +171,6 @@ a:focus { text-decoration: none; color: inherit; }
   font-size: 35px;
   margin-top: 150px;
 }
-.card-tag {
-  width: 300px;
-  height: 480px;
-  background: #394cfe;
-  border-radius: 30px;
-  position: absolute;
-  z-index: 9;
-  transform: rotate(35deg);
-  box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
-  top: -270px;
-  left: 160px;
-}
-.card-tag-two{
-  width: 300px;
-  height: 480px;
-  background: #394cfe;
-  border-radius: 30px;
-  position: absolute;
-  z-index: 9;
-  transform: rotate(140deg);
-  box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
-  top: 135px;
-  right: -129px;
-}
 
 .border{
   color: #fec1fc;
@@ -224,17 +200,18 @@ a:focus { text-decoration: none; color: inherit; }
   color: #BDC3C7;
   letter-spacing: 1px;
   font-weight: 100;
-  line-height: 37px;
+  line-height: 30px;
 }
 .auth-buttons {
   position: relative;
   top: 220px;
-  width: 40%;
+  width: 60%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
 }
-.auth-buttons button {
+
+.auth-button-1 {
   width: 190px;
   height: 60px;
   background: #f81b84;
@@ -246,6 +223,20 @@ a:focus { text-decoration: none; color: inherit; }
   font-weight: 700;
   color: white;
 }
+
+.auth-button-2 {
+  width: 190px;
+  height: 60px;
+  background: #43C0F6;
+  border-radius: 50px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
 .auth-buttons button:hover {
   background: #f5ce28;
   color: black;
@@ -289,16 +280,16 @@ a:focus { text-decoration: none; color: inherit; }
   width: 100px;
   margin: 0 auto;
   padding-left: 0;
-  background: #f5ce28;
+  background: #F81B84;
   color: black;
   cursor: pointer;
   font-weight: 600;
 }
 .register-container form input:nth-child(6):hover{
-  background: white;
+  background: #F2EEE2;
 }
 input::placeholder {
-  color: #000;
+  color: #F2EEE2;
 }
 /*  ---------------- LOG IN PAGE  ---------------- */
 .login-wrap {
@@ -318,7 +309,7 @@ input::placeholder {
 }
 .login-container {
   height: 100vh;
-  background-color: #43C0F6;
+  background-color: #F2EEE2;
 }
 .login-container form {
   width: 55%;
@@ -340,7 +331,7 @@ input::placeholder {
   width: 100px;
   margin: 0 auto;
   padding-left: 0;
-  background: #f5ce28;
+  background: #43C0F6;
   color: black;
   cursor: pointer;
   font-weight: 600;
