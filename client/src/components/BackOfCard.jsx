@@ -40,6 +40,14 @@ class BackOfCard extends Component{
         this.props.getNextCard();
     }
 
+
+    handleCorrect = e => {
+        // using moment
+        // if correct:true time: currentTime+7
+        // put to database with correct:true, time: currentTime+3h
+        this.handleNextCard(e)    
+    }
+
     render(){
         if(this.state.didMount){
             return(
@@ -48,12 +56,12 @@ class BackOfCard extends Component{
                     <div className="create-back">
                         <div className="create-back-side-card">
                             <h1>{this.state.answer}</h1>
-                            {/*http://fontawesome.io/icon/times-circle/*/}
-                            {/*http://fontawesome.io/icon/check-circle-o/*/}
                         </div>
-                    </div>
-                    <button onClick={this.handleNextCard}>Next</button>
-                    
+                        <button onClick={this.handleNextCard}>Incorrect</button>
+                        {/* or http://fontawesome.io/icon/times-circle/*/}
+                        <button onClick={this.handleCorrect}>Correct</button>
+                        {/* or http://fontawesome.io/icon/check-circle-o/*/}
+                    </div>                    
                 </div>
                 
             )
