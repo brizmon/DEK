@@ -53,7 +53,7 @@ class EditCards extends Component{
       )
     }
     return(
-      <div className="edit-cards-main">
+      <div className="edit-cards-main_no_cards">
         <h1>You have no cards</h1>
       </div>
     )
