@@ -51,7 +51,8 @@ deckController.findById = (req, res) => {
 }
 
 deckController.update = (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
+    console.log(req.params.id);
     Deck.update({
         user_id: req.body.user_id,
         // for edit these two change
@@ -62,7 +63,7 @@ deckController.update = (req, res) => {
         setTime: req.body.setTime,
         timesRight: req.body.timesRight,
         timesWrong: req.body.timesWrong,
-        deckNumber: req.body.deckNumber
+        deckNumber: req.body.deckNumber,
     }, req.params.id)
     .then(card => {
         console.log(`Updated ${card} in decks-controller`)

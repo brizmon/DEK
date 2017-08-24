@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import axios from 'axios'
+import moment from 'moment'
+
+
 
 class BackOfCard extends Component{
     constructor(){
@@ -42,7 +46,25 @@ class BackOfCard extends Component{
     handleCorrect = e => {
         // using moment
         // if correct:true time: currentTime+7
+        // current moment
+        let currentMoment = moment().format()
+        let futureMoment = moment(currentMoment).add(5,'hour').format()
+        if(this.state.correct){
+            futureMoment = moment(currentMoment).add(2,'days').format()
+        }
+        // console.log(futureMoment);
+
+
+        let stateCopy = this.state;
+        stateCopy.setTime = futureMoment;
+        stateCopy.correct = true;
+        // needs to be a delay here
         // put to database with correct:true, time: currentTime+3h
+        axios.put(`/decks/${this.state.id}`,stateCopy)
+        // .then(res => {
+        //     // have some animation here
+            
+        // })
         this.handleNextCard(e)
     }
 

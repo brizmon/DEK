@@ -70,6 +70,9 @@ class QuizScreen extends Component{
     )
   }
 
+
+
+
   // display all cards
   render(){
     if(this.state.gotCards){
