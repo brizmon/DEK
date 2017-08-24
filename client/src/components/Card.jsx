@@ -35,7 +35,7 @@ class Card extends Component{
             [name]:value,
         })
     }
-    handleFormSubmit = (e) => {
+    handlePutFormSubmit = (e) => {
         e.preventDefault();
         console.log('this is where we should put to /decks')
         console.log(this.props.card)
@@ -46,6 +46,21 @@ class Card extends Component{
         .catch(err => {
             console.log(err);
         })
+    }
+    handleDeleteFormSubmit = (e) => {
+        e.preventDefault();
+        // console.log('this is where we should delete to /decks')
+        // console.log(this.props.card)
+        axios.delete(`/decks/${this.state.id}`,this.state);
+        // .then(res => {
+        //     console.log("Delete Complete")
+        //     this.props.handleRedirect('/main');
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // })
+        console.log("Delete Complete")
+        this.props.handleRedirect('/main');
     }
 
 
@@ -66,7 +81,10 @@ class Card extends Component{
                             <p>Edit your answer</p>
                             <form action="/decks" method='POST'>
                                 <textarea onChange={e=>this.handleInputChange(e)} name="answer" cols="30" rows="10" value={this.state.answer}></textarea>
-                                <input onClick={e=>{this.handleFormSubmit(e)}}type="submit" class='save-back-side-card' value='save'/>
+                                <input onClick={e=>{this.handlePutFormSubmit(e)}}type="submit" class='save-back-side-card' value='Save'/>
+                            </form>
+                            <form method="POST" action="/decks?_method=DELETE">
+                                <input onClick={e=>{this.handleDeleteFormSubmit(e)}}type="submit" class='save-back-side-card' value='Delete'/>
                             </form>
                         </div>
                     </div>

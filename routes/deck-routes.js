@@ -7,6 +7,7 @@ deckRoutes.get('/', decksController.index)
 deckRoutes.post('/', decksController.create)
 deckRoutes.get('/:id', decksController.findById)
 deckRoutes.put('/:id', decksController.update)
+deckRoutes.delete('/:id', decksController.delete)
 
 
 

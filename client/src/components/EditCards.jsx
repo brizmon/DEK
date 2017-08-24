@@ -29,7 +29,7 @@ class EditCards extends Component{
       // put all cards into array of tags
       for(let j = 0; j < res.data.length; ++j){
         cards.push(
-          <Card card={res.data[j]}/>
+          <Card handleRedirect={this.props.handleRedirect} card={res.data[j]}/>
         )
       }
       this.setState({
