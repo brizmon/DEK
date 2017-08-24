@@ -21,7 +21,7 @@ class QuizScreen extends Component{
 
   getCards = () => {
     let cards = [];
-    axios.get('/decks', {
+    axios.get('/decks/filtered', {
       user_id: this.props.state.user.id
     })
     .then(res => {

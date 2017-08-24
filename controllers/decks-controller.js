@@ -1,6 +1,6 @@
 const Deck = require('../models/deck.js');
 const deckController = {};
-
+const moment = require('moment')
 
 deckController.index = (req, res) => {
     console.log(req);
@@ -74,6 +74,13 @@ deckController.update = (req, res) => {
     })
 }
 
+
+deckController.filterByTime = (req, res) => {
+    Deck.findByTime(req.body.user_id, moment().format())
+    .then(cards => {
+        res.json(cards);
+    })
+}
 
 
 deckController.delete = (req, res) => {

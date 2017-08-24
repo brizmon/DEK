@@ -46,6 +46,15 @@ Deck.update = (deck, id) => {
     `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, parseInt(id), deck.deckNumber]);
 }
 
+
+Deck.findByTime = (user_id, moment) => {
+    return db.query(`
+        SELECT * FROM decks
+        WHERE user_id=$1
+        AND setTime = $2
+    `, [user_id, moment])
+}
+
 Deck.delete = (id) => {
     return db.none(`
         DELETE FROM deck
