@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
-import axios from 'axios'
 
-
-
-
-class Card extends Component{
+class BackOfCard extends Component{
     constructor(){
         super();
         this.state = {
@@ -38,39 +34,25 @@ class Card extends Component{
     handleFormSubmit = (e) => {
         e.preventDefault();
         console.log('this is where we should put to /decks')
-        console.log(this.props.card)
-        axios.put(`/decks/${this.state.id}`,this.state)
-        .then(res => {
-            console.log("Update Complete")
-        })
-        .catch(err => {
-            console.log(err);
-        })
     }
-
+    handleNextCard = e => {
+        this.props.rotateCard();
+        this.props.getNextCard();
+    }
 
     render(){
         if(this.state.didMount){
             return(
-                <div className="cards-container-edit">
-                    <div className="create-front">
-                        <div className="create-front-side-card">
-                            <p>Edit your question</p>
-                            <form action="/decks" method='POST'>
-                                <textarea onChange={e=>this.handleInputChange(e)} name="question" cols="30" rows="10" value={this.state.question}></textarea>
-                            </form>
-                        </div>
-                    </div>
+                <div className="cards-container">
+                    
                     <div className="create-back">
                         <div className="create-back-side-card">
-                            <p>Edit your answer</p>
-                            <form action="/decks" method='POST'>
-                                <textarea onChange={e=>this.handleInputChange(e)} name="answer" cols="30" rows="10" value={this.state.answer}></textarea>
-                                <input onClick={e=>{this.handleFormSubmit(e)}}type="submit" class='save-back-side-card' value='save'/>
-                            </form>
+                            <h1>{this.state.answer}</h1>
+                            {/*http://fontawesome.io/icon/times-circle/*/}
+                            {/*http://fontawesome.io/icon/check-circle-o/*/}
                         </div>
                     </div>
-
+                    <button onClick={this.handleNextCard}>Next</button>
                     
                 </div>
                 
@@ -85,4 +67,4 @@ class Card extends Component{
     }
 }
 
-export default Card;
+export default BackOfCard;

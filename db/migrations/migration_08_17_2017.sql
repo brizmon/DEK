@@ -1,5 +1,14 @@
 
+-- psql -d project_3_db 
+-- SELECT * FROM deck;
+
+
+DROP TABLE IF EXISTS deck;
 DROP TABLE IF EXISTS users;
+
+
+
+
 CREATE TABLE users(
     id BIGSERIAL PRIMARY KEY,
     username VARCHAR UNIQUE NOT NULL,
@@ -10,9 +19,6 @@ CREATE TABLE users(
 );
 
 
--- psql -d project_3_db 
--- SELECT * FROM deck;
-DROP TABLE IF EXISTS deck;
 CREATE TABLE deck(
     id BIGSERIAL PRIMARY KEY,
     question TEXT,
@@ -23,6 +29,6 @@ CREATE TABLE deck(
     timesWrong INT NOT NULL,
     user_id INT REFERENCES users(id) NOT NULL,
     deckNumber INT NOT NULL
-)
+);
 
 

@@ -51,8 +51,16 @@ class App extends Component {
       options
     })
     .then(res => {
-      this.setState(options)
-      this.handleRedirect('/main')
+      console.log("Options:")
+      console.log(options)
+      console.log('Res Data:')
+      console.log(res.data)
+      this.setState({
+        auth: res.data.auth,
+        user: res.data.user,
+      })
+      // handleLoginSubmit = (e, res.username, password)
+      window.location.href = '/'
     })
     .catch(err => console.log(err));
   }
@@ -92,7 +100,6 @@ class App extends Component {
       <Router>
         <div className="App">
           <div className="main">
-
             <Route exact path="/" render={() => <Welcome />} />
             <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} firstname={this.state.user.firstname}/>} />
             <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
@@ -100,7 +107,7 @@ class App extends Component {
             <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
             <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
-            <Route exact path="/quizscreen" component={QuizScreen} />
+            <Route exact path="/quizscreen" render={() => <QuizScreen handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/editcards" render={() => <EditCards handleRedirect={this.handleRedirect} state={this.state} />} />
             {this.redirectTo()}
 

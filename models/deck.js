@@ -40,10 +40,10 @@ Deck.update = (deck, id) => {
         setTime = $5,
         timesRight = $6,
         timesWrong = $7,
-        deckNumber = $9,
+        deckNumber = $9
         WHERE id = $8
         RETURNING *
-    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, id, deck.deckNumber]);
+    `, [deck.user_id, deck.question, deck.answer, deck.correct, deck.setTime, deck.timesRight, deck.timesWrong, parseInt(id), deck.deckNumber]);
 }
 
 Deck.delete = (id) => {

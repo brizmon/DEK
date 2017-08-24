@@ -1,83 +1,98 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
 
 import Header from './Header';
 import Footer from './Footer';
+import axios from 'axios';
+import Card from './Card.jsx';
+import FrontOfCard from './FrontOfCard.jsx'
+import BackOfCard from './BackOfCard.jsx'
 
-import QuizCardShow from './QuizCardShow';
+
 
 class QuizScreen extends Component{
-
   constructor(){
     super();
     this.state = {
-      thestuff: '',
-      thestuffLoaded: false,
+      gotCards: false,
+      currentCard: 0,
+      frontOfCard: true,
     }
-    this.renderCardPage = this.renderCardPage.bind(this);
   }
 
-  handleCardPage(){
-  axios.get('/decks')
+  getCards = () => {
+    let cards = [];
+    // fetch to backend /decks
+    // console.log(this.props.state.user.id)
+    axios.get('/decks', {
+      user_id: this.props.state.user.id
+    })
     .then(res => {
+      console.log(res.data);
+      // put all cards into array of tags
+      for(let j = 0; j < res.data.length; ++j){
+        cards.push(
+          <Card card={res.data[j]}/>
+        )
+      }
       this.setState({
-        thestuff: res.data,
-        thestuffLoaded: true,
+        cards: cards,
+        gotCards: true,
       })
     })
   }
+  
+  componentDidMount(){
+    this.getCards();
+  }
 
-  renderCardPage(){
-    if (this.state.thestuffLoaded){
+
+  rotateCard=()=>{
+    this.setState({
+      frontOfCard: !this.state.frontOfCard,
+    })
+  }
+  
+  getNextCard = () => {
+    if(this.state.currentCard < this.state.cards.length)
+    this.setState({
+      currentCard: this.state.currentCard+1,
+    })
+    else{
+      console.log("Got last card");
+    }
+  }
+
+
+  decideWhichSideOfCard = () => {
+    if(this.state.frontOfCard){
+      return(
+        <FrontOfCard rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
+      )
+    }
+    return(
+      <BackOfCard getNextCard={this.getNextCard} rotateCard={this.rotateCard} card={this.state.cards[this.state.currentCard].props.card}/>
+    )
+  }
+
+  // display all cards
+  render(){
+    if(this.state.gotCards){
       return (
-        <div className='quiz-screen'>
-
-          <div className="front-card-all" onClick="flip-card">
-            <div className="show-front">
-              <p>Front of card goes here </p>
-            </div>
-
-            <div className="edit">
-              <button className="edit-card-button" onClick="openitsform">Edit</button>
-            </div>
-          </div>
-
-          <div className="back-card-all">
-            <div className="show-back">
-               <p>Back of card goes here </p>
-            </div>
-
-            <div className="next-card-arrow">
-              <p>Arrow goes here</p>
-            </div>
-
-              <button className="edit-card" onClick="openbackcreateform">Edit</button>
-
-              <button className="right-card-button" onClick="booleantrue andnext">right</button>
-              <button className="wrong-card-button" onClick="booleanwrong andnext">wrong</button>
-            </div>
-            <button className="delete-card" onClick="deletecard">Delete</button>
-
+        <div className='edit-screen'>
+          <Header />
+          {this.decideWhichSideOfCard()}
           <Footer />
         </div>
       )
     }
-    else {
-      return <p>Loading... </p>
-    }
-  }
-  render(){
-    return (
+    return(
       <div>
-        <Header />
-
-        <div>{this.renderCardPage()}</div>
-
-        <Footer />
+        Loading...
       </div>
     )
   }
+  
 }
 
 export default QuizScreen;
