@@ -11,9 +11,7 @@ const Header = (props) => {
         <div className='nav'>
 
           <div className='bars'>
-            <p>-</p>
-            <p>-</p>
-            <p>-</p>
+            <i className="fa fa-bars" aria-hidden="true"></i>
           </div>
 
           <div className="nav-dropdown">

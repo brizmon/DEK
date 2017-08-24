@@ -41,17 +41,18 @@ class FrontOfCard extends Component{
         if(this.state.didMount){
             return(
                 <div>
-                    {/*http://fontawesome.io/icon/arrow-circle-o-right/*/}
                     <div className="cards-container">
                         <div className="create-front">
                             <div className="create-front-side-card">
-                                <h1>{this.state.question}</h1>
+                                <h1 className="quiz_question">{this.state.question}</h1>
+                                <div className="edit_delete_icons">
+                                    <i className="fa fa-pencil" aria-hidden="true"></i>
+                                    <i className="fa fa-trash" aria-hidden="true"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <button>Edit</button>
-                    <button>Delete</button>
-                    <button className="rotate_button" onClick={this.props.rotateCard}>Flip</button>
+                    </div> 
+                    <button className="rotate_button" onClick={this.props.rotateCard}>Flip Card</button>
                 </div>
             )
         }

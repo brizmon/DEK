@@ -46,6 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
 /*  ---------------- FONTS  ---------------- */
 @font-face {
@@ -104,10 +107,12 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 .bars {
-  font-weight: 900;
-  color: black;
-  font-size: 70px;
-  line-height: 15px;
+  width: 31px;
+  height: 31px;
+  position: relative;
+  left: 55px;
+  top: 15px;
+  font-size: 35px;
 }
 
 .nav-dropdown {
@@ -649,6 +654,26 @@ textarea {
 .pickquiz-button-two:hover p {
   color: #F5CE28;
 }
+.quiz_question {
+  text-align: center;
+  font-size: 35px;
+  line-height: 35px;
+}
+.edit_delete_icons {
+  width: 20%;
+  margin: 0 auto;
+  position: relative;
+  top: 285px;
+  color: #f81b84;
+}
+.fa-pencil {
+  padding-right: 10px;
+  font-size: 25px;
+}
+.fa-trash {
+  padding-left: 10px;
+  font-size: 25px;
+}
 
 
 /*  ---------------- EDIT CARD PAGE (front) ---------------- */
@@ -702,5 +727,18 @@ textarea {
 
 /*  ---------------- QUIZ SCREEN PAGE ---------------- */
 .rotate_button {
-  background: red;
+  width: 105px;
+  margin: 0 auto;
+  height: 45px;
+  border-radius: 9px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: #f5ce28;
+  color: black;
+  position: relative;
+  top: -397px;
+  display: block;
 }
