@@ -7,7 +7,7 @@ import Card from './Card.jsx';
 import FrontOfCard from './FrontOfCard.jsx'
 import BackOfCard from './BackOfCard.jsx'
 
-class QuizScreen extends Component{
+class CuratedQuizScreen extends Component{
   constructor(){
     super();
     this.state = {
@@ -106,4 +106,4 @@ class QuizScreen extends Component{
 
 }
 
-export default QuizScreen;
+export default CuratedQuizScreen;

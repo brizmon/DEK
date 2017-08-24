@@ -3,7 +3,7 @@ const deckController = {};
 const moment = require('moment')
 
 deckController.index = (req, res) => {
-    console.log(req);
+    // console.log(req);
     Deck.findAll(req.user.id)
     .then(cards => {
         // console.log(`${card} is in index`);
@@ -76,7 +76,8 @@ deckController.update = (req, res) => {
 
 
 deckController.filterByTime = (req, res) => {
-    Deck.findByTime(req.body.user_id, moment().format())
+    console.log(req)
+    Deck.findByTime(req.user.id, moment().format())
     .then(cards => {
         res.json(cards);
     })

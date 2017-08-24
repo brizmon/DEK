@@ -49,9 +49,9 @@ Deck.update = (deck, id) => {
 
 Deck.findByTime = (user_id, moment) => {
     return db.query(`
-        SELECT * FROM decks
+        SELECT * FROM deck
         WHERE user_id=$1
-        AND setTime = $2
+        AND setTime < $2
     `, [user_id, moment])
 }
 
