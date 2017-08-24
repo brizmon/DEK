@@ -12,6 +12,7 @@ import UserProfile from './components/UserProfile';
 import CreateCard from './components/CreateCard';
 import PickQuizType from './components/PickQuizType';
 import QuizScreen from './components/QuizScreen';
+import CuratedQuizScreen from './components/CuratedQuizScreen';
 import EditCards from './components/EditCards';
 
 import axios from 'axios';
@@ -105,6 +106,7 @@ class App extends Component {
             <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />
             <Route exact path="/quizscreen" render={() => <QuizScreen handleRedirect={this.handleRedirect} state={this.state} />} />
+            <Route exact path="/curatedquizscreen" render={() => <CuratedQuizScreen handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/editcards" render={() => <EditCards handleRedirect={this.handleRedirect} state={this.state} />} />
             {this.redirectTo()}
 
