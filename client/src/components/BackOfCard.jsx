@@ -81,16 +81,14 @@ class BackOfCard extends Component{
 
                     <div className="create-back-quiz">
 
-                        <div className="create-back-side-card">
-                            <h1>{this.state.answer}</h1>
+                        <div className="create-back-side-card quiz_back_card">
+                            <h1 className="quiz_answer">{this.state.answer}</h1>
                         </div>
-
-                        <div className='right-wrong'>
-                            <button onClick={this.handleIncorrect} className='incorrect-button'>Incorrect</button>
-                            {/* or http://fontawesome.io/icon/times-circle/*/}
-                            <button onClick={this.handleCorrect} className='correct-button'>Correct</button>
-                            {/* or http://fontawesome.io/icon/check-circle-o/*/}
-                        </div>
+                    </div>
+                    <div className='right-wrong'>
+                        <i className="fa fa-check" aria-hidden="true"><button onClick={this.handleIncorrect} className='incorrect-button'></button></i>
+                        <i className="fa fa-times" aria-hidden="true"><button onClick={this.handleCorrect} className='correct-button'></button></i>
+                        
                     </div>
                 </div>
 

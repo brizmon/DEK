@@ -679,6 +679,39 @@ textarea {
   font-size: 35px;
   line-height: 35px;
 }
+.quiz_answer {
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+}
+.quiz_back_card{
+  border: 1px solid lightslategrey;
+  height: 350px;
+  width: 240px;
+  overflow: scroll;
+  border-radius: 11px;
+  top: 28px;
+}
+.scoreScreen {
+  width: 50%;
+  height: 500px;
+  background: #F5CE28;
+  margin: 0 auto;
+  position: relative;
+  top: 120px;
+  border-radius: 40px;
+  text-align: center;
+}
+.scoreScreen h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+}
+.scoreScreen h1:nth-child(1){
+  padding-top: 170px;
+}
+.scoreScreen h1:nth-child(2){
+  font-weight: 600;
+}
 .edit_delete_icons {
   width: 20%;
   margin: 0 auto;
@@ -703,15 +736,6 @@ textarea {
   padding-bottom: 8rem;
   background: #43C0F6;
 }
-
-.edit-container {
-  height: 90vh;
-}
-
-.edit-cards-main {
-  background-color: #43C0F6;
-}
-
 .edit-screen h2 {
   text-align: center;
   top: 115px;
@@ -786,9 +810,7 @@ textarea {
 }
 
 .right-wrong {
-  display: flex;
-  flex-direction: row;
-  margin-top: 350px;
+  
 }
 
 .correct-button {

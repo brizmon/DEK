@@ -56,6 +56,7 @@ class EditCards extends Component{
 
             </div>
           </div>
+          <Footer />
         </div>
 
       )
