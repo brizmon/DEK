@@ -44,6 +44,9 @@ class BackOfCard extends Component{
 
     handleIncorrect = e => {
         this.props.increaseNumberWrong();
+        let stateCopy = this.state;
+        stateCopy.correct = false;
+        axios.put(`/decks/${this.state.id}`,stateCopy)
         this.handleNextCard(e);
     }
 
@@ -90,7 +93,6 @@ class BackOfCard extends Component{
                     <div className='right-wrong'>
                         <button onClick={this.handleIncorrect} className='correct-button'><i className="fa fa-times" aria-hidden="true"></i></button>
                         <button onClick={this.handleCorrect} className='incorrect-button'><i className="fa fa-check" aria-hidden="true"></i></button>
-                        
                     </div>
                 </div>
 
