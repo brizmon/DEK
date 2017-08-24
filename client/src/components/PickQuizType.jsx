@@ -12,8 +12,8 @@ const PickQuizType = (props) => {
 
       <h2>Pick Your Quiz Type!</h2>
       <div className='pickquiz-form'>
-          <Link className='pickquiz-button' Link to="/quizscreen"><p className="quiz_link">Basic Quiz</p><p>(review all cards)</p></Link>
-          <Link className='pickquiz-button' Link to="/quizscreen"><p className="quiz_link">Curated Quiz</p><p>(spaced repetition)</p></Link>
+          <Link className='pickquiz-button button_one' Link to="/quizscreen"><p className="quiz_link">Basic Quiz</p><p>(review all cards)</p></Link>
+          <Link className='pickquiz-button button_two' Link to="/quizscreen"><p className="quiz_link">Curated Quiz</p><p>(spaced repetition)</p></Link>
       </div>
 
       <Footer />

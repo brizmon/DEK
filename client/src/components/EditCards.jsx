@@ -50,6 +50,7 @@ class EditCards extends Component{
       return (
         <div className='edit-screen'>
           <Header />
+          <h2>Edit your Cards!</h2>
           {this.state.cards}
           <Footer />
         </div>

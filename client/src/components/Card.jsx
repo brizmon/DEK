@@ -39,7 +39,7 @@ class Card extends Component{
     render(){
         if(this.state.didMount){
             return(
-                <div className="cards-container">
+                <div className="cards-container-edit">
                     <div className="create-front">
                         <div className="create-front-side-card">
                             <p>Edit your question</p>
