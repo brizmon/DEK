@@ -73,7 +73,7 @@ class CuratedQuizScreen extends Component{
       )
     }
     return(
-      <h1>You have no cards</h1>
+      <h1>You have no cards to study at this time</h1>
     )
     
   }
