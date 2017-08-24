@@ -410,6 +410,19 @@ input::placeholder {
 }
 
 
+/*  ---------------- ABOUT APP PAGE ---------------- */
+
+.about-app {
+  height: 100vh;
+  position: relative;
+  background-color: #43C0F6;
+}
+
+.about-app-message {
+  color: black;
+  font-size: 20px;
+}
+
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
 .create-card {
   height: 100vh;

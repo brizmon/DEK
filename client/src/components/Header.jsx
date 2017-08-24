@@ -16,6 +16,7 @@ const Header = (props) => {
 
           <div className="nav-dropdown">
             <Link className='nav-link' Link to="/userprofile">My Profile</Link>
+            <Link className='nav-link' Link to="/aboutapp">About DEK</Link>
             <Link className='nav-link' Link to="/">Log out</Link>
           </div>
 
