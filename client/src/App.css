@@ -82,12 +82,14 @@ a:focus { text-decoration: none; color: inherit; }
 /*  ---------------- HEADER  ---------------- */
 .header {
   width: 100%;
-  height: 65px;
+  height: 10vh;
+  min-height: 55px;
   background: #F2EEE2;
   display: flex;
   position: fixed;
   z-index: 9;
 }
+
 .header h1 {
   font-family: 'axisbold';
   font-size: 50px;
@@ -101,16 +103,6 @@ a:focus { text-decoration: none; color: inherit; }
   color: #F81B84;
 }
 
-.nav {
-/*  background: black;
-  border-radius: 83px;
-  width: 45px;
-  height: 45px;
-  margin-right: 20px;
-  margin-top: 9px;
-  cursor: pointer;*/
-}
-
 .bars {
   font-weight: 900;
   color: black;
@@ -119,15 +111,14 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 .nav-dropdown {
-  height: 100px;
+  height: 85px;
   position: relative;
-  top: 25px;
+  top: 50px;
   width: 120px;
   right: 54px;
   display: flex;
   flex-direction: column;
   text-align: center;
-/*  opacity: 0;*/
 }
 
 .nav-link {
@@ -149,7 +140,7 @@ a:focus { text-decoration: none; color: inherit; }
 /*  ---------------- FOOTER  ---------------- */
 .footer {
   background: black;
-  height: 30px;
+  min-height: 5vh;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -355,7 +346,7 @@ input::placeholder {
 .main-menu {
   height: 100vh;
   position: relative;
-  background: #f5f8f9;
+  background-color: #43C0F6;
 }
 .welcome-user-name {
   display: flex;
@@ -363,6 +354,7 @@ input::placeholder {
   font-size: 25px;
   justify-content: center;
   align-items: center;
+  background-color: #43C0F6;
 }
 
 .menu-buttons{
@@ -374,9 +366,10 @@ input::placeholder {
   justify-content: space-around;
   position: relative;
   top: 90px;
+  background-color: #43C0F6;
 }
 .menu-button{
-  background: #fec1fc;
+  background: #F81B84;
   flex: 250px 0;
   border-radius: 15px;
   height: 85px;
@@ -385,11 +378,30 @@ input::placeholder {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  color: white;
+  color: #F2EEE2;
 }
+
 .menu-button:hover {
-   background: #b7f8fe;
-   color: black;
+   background: #F2EEE2;
+   color: #F81B84;
+}
+
+.menu-button-edit{
+  background: #F5CE28;
+  flex: 250px 0;
+  border-radius: 15px;
+  height: 85px;
+  cursor: pointer;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #F2EEE2;
+}
+
+.menu-button-edit:hover {
+   background: #F2EEE2;
+   color: #F5CE28;
 }
 
 
@@ -580,7 +592,8 @@ textarea {
   position: relative;
   top: 165px;
 }
-.pickquiz-button{
+
+.pickquiz-button-one{
   flex: 50% 0;
   height: 68vh;
   cursor: pointer;
@@ -589,36 +602,63 @@ textarea {
   text-align: center;
   background: #f81b84;
 }
-.pickquiz-button p{
+
+.pickquiz-button-two {
+  flex: 50% 0;
+  height: 68vh;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  background: #F5CE28;
+}
+
+.pickquiz-button-one p{
   position: relative;
   top: 39%;
   color: white;
   letter-spacing: 2px;
 }
-.pickquiz-button p:nth-child(2) {
-  font-size: 20px;
+
+.pickquiz-button-two p{
+  position: relative;
+  top: 39%;
+  color: white;
+  letter-spacing: 2px;
 }
+
 .quiz_link{
    font-size: 50px;
    font-weight: 600;
    letter-spacing: 2px;
    padding-bottom: 7px;
 }
-.button_two{
-  background: #f5ce28;
+
+.pickquiz-button-one:hover {
+  background-color: #f2EEE2;
 }
-.pickquiz-button:hover {
-  color: black;
-  background: #f2eee2;
+
+.pickquiz-button-one:hover p {
+  color: #F81B84;
+}
+
+.pickquiz-button-two:hover {
+  background: #f2EEE2;
+}
+
+.pickquiz-button-two:hover p {
+  color: #F5CE28;
 }
 
 
 /*  ---------------- EDIT CARD PAGE (front) ---------------- */
+
 .edit-screen {
     min-height: 100%;
     position: relative;
     padding-bottom: 8rem;
-    background: #394cfe;
+    background: #43C0F6;
+    height: 85vh;
 }
 .edit-screen h2 {
   text-align: center;
@@ -638,6 +678,26 @@ textarea {
   position: relative;
   top: 65px;
   padding-bottom: 50px;
+}
+
+.delete-card {
+  width: 80px;
+  margin: 0 auto;
+  height: 44px;
+  border-radius: 9px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  background: #F81B84;
+  color: white;
+}
+
+.delete-card:hover {
+  background: #F5CE28;
+  color: black;
+  font-weight: 600;
 }
 
 /*  ---------------- QUIZ SCREEN PAGE ---------------- */

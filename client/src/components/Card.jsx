@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios'
 
-
-
-
 class Card extends Component{
     constructor(){
         super();
@@ -13,20 +10,18 @@ class Card extends Component{
     }
     componentDidMount(){
         this.setState({
-            user_id: this.props.card.user_id, 
-            question: this.props.card.question, 
-            answer: this.props.card.answer, 
-            correct: this.props.card.correct, 
-            setTime: this.props.card.settime, 
-            timesRight: this.props.card.timesright, 
-            timesWrong: this.props.card.timeswrong, 
+            user_id: this.props.card.user_id,
+            question: this.props.card.question,
+            answer: this.props.card.answer,
+            correct: this.props.card.correct,
+            setTime: this.props.card.settime,
+            timesRight: this.props.card.timesright,
+            timesWrong: this.props.card.timeswrong,
             deckNumber: this.props.card.decknumber,
             didMount: true,
             id: this.props.card.id,
         })
     }
-
-
 
     handleInputChange = (e) => {
         const name=e.target.name;
@@ -81,25 +76,25 @@ class Card extends Component{
                             <p>Edit your answer</p>
                             <form action="/decks" method='POST'>
                                 <textarea onChange={e=>this.handleInputChange(e)} name="answer" cols="30" rows="10" value={this.state.answer}></textarea>
-                                <input onClick={e=>{this.handlePutFormSubmit(e)}}type="submit" class='save-back-side-card' value='Save'/>
+                                <input onClick={e=>{this.handlePutFormSubmit(e)}}type="submit" className='save-back-side-card' value='Save'/>
                             </form>
                             <form method="POST" action="/decks?_method=DELETE">
-                                <input onClick={e=>{this.handleDeleteFormSubmit(e)}}type="submit" class='save-back-side-card' value='Delete'/>
+                                <input onClick={e=>{this.handleDeleteFormSubmit(e)}}type="submit" className='delete-card' value='Delete'/>
                             </form>
                         </div>
                     </div>
 
-                    
+
                 </div>
-                
+
             )
         }
         return(
             <div>
                 Loading...
-            </div>    
+            </div>
         )
-        
+
     }
 }
 

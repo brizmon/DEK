@@ -6,9 +6,6 @@ import Footer from './Footer';
 import axios from 'axios';
 import Card from './Card.jsx';
 
-
-
-
 class EditCards extends Component{
   constructor(){
     super();
@@ -38,11 +35,11 @@ class EditCards extends Component{
       })
     })
   }
-  
+
   componentDidMount(){
     this.getCards();
   }
-  
+
 
   // display all cards
   render(){
@@ -51,7 +48,9 @@ class EditCards extends Component{
         <div className='edit-screen'>
           <Header />
           <h2>Edit your Cards!</h2>
-          {this.state.cards}
+          <div className="edit-cards-main">
+            {this.state.cards}
+          </div>
           <Footer />
         </div>
       )
@@ -62,7 +61,7 @@ class EditCards extends Component{
       </div>
     )
   }
-  
+
 }
 
 export default EditCards;

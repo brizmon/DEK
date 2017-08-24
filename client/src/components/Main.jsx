@@ -19,7 +19,7 @@ const Main = (props) => {
       <div className='menu-buttons'>
         <button onClick={(e)=>props.handleRedirect('/createcard')} className='menu-button'>Create Card</button>
         <button onClick={(e)=>props.handleRedirect('/pickquiztype')} className='menu-button'>Take Quiz</button>
-        <button onClick={(e)=>props.handleRedirect('/editcards')} className='menu-button'>Edit Cards</button>
+        <button onClick={(e)=>props.handleRedirect('/editcards')} className='menu-button-edit'>Edit Cards</button>
       </div>
 
       <Footer />
