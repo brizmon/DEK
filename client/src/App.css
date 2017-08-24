@@ -116,7 +116,7 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 .nav-dropdown {
-  height: 85px;
+  height: 100px;
   position: relative;
   top: 50px;
   width: 120px;
