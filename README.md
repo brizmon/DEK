@@ -26,16 +26,16 @@ DEK is deployed at:  https://dek-flashcards.herokuapp.com/
 ## Technologies
 
 ### React
-The App will use React to create the front-end file structure.
+The App uses React for the front-end file structure and routing between pages.
 
 ### Express
-The Express-Backend will handle the requests that the front end sends. This happens via routing requests. 
+The Express-Backend handles the requests that the front end sends. This happens via routing requests. 
 
-### SQL
-The approach of our card system will be sorting the user's cards into an array of database tables that each dictate a certain point of time in the future when the card should prompt again. Each card will have a tally coloumn that updates based on whether the user got the question right or wrong.
+### Postgres/SQL
+The App uses database tables that each set a certain point of time in the future when the card should prompt again for the 'curated' quiz option. 
 
 ### Auth
-As typical authorization happens, the user will get to a register/login screen as a landing page. From there the user will send a request to the server which will start a connection. 
+The app uses auth for unique user registration/login.
 
 ### Sample Code
 [ADD CODE SNIPPETS]
@@ -44,5 +44,5 @@ As typical authorization happens, the user will get to a register/login screen a
 [ADD TEXT]
 
 ## Future Improvements
-[ADD TEXT]
+With additional time, we would like to improve this app by: (1) allowing the user to create multiple decks; and (2) add additional visual effects when the user takes a quiz.
 
