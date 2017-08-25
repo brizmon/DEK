@@ -38,7 +38,18 @@ The App uses database tables that each set a certain point of time in the future
 The app uses auth for unique user registration/login.
 
 ### Sample Code
-[ADD CODE SNIPPETS]
+
+Here is the code in models/deck.js for filtering the flashcards for the 'curated quiz':
+
+    Deck.findByTime = (user_id, moment) => {
+        return db.query(`
+            SELECT * FROM deck
+            WHERE user_id=$1
+            AND 
+            (setTime < $2
+            OR correct=false)
+        `, [user_id, moment])
+    }
 
 ## Making of the App
 DEK was a team effort. Brandon Hew played the role of our Git dictator, resolving code conflicts as each member submitted code (as well as fixing the team's bugs and errors along the way). Briseida Montiel worked primarily on the front-end design/CSS code. Daniel Beebe worked primarily on the React components and React routing/navigation through the App. Ivan Alvarian worked primarily on back-end, setting up the App's database and utilizing it in taking a quiz.
