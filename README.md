@@ -2,7 +2,9 @@
 
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
-[ADD SCREEN SHOT]
+![img1](./images/Main-menu-shot.png)
+
+![img1](./images/Welcome-page-shot.png)
 
 ## User Story
 'DEK' is an app which allows users to create their own unique stack of flash cards to aid in the learning process. This app can be used to learn a new language (foreign or programming) or any new subject which requires memorization.

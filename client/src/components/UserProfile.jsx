@@ -12,7 +12,6 @@ class UserProfile extends Component{
     }
   }
 
-
   getCards = () => {
     let cards = [];
     axios.get('/decks', {
@@ -33,8 +32,6 @@ class UserProfile extends Component{
     })
   }
 
-  
-
   render(){
     this.getCards();
     if(this.state.gotCards){
@@ -43,7 +40,7 @@ class UserProfile extends Component{
           <Header />
 
           <div className="user-profile-info">
-          <h2>Your Profile</h2>
+            <h2>Your Profile</h2>
             <h3>User ID: {this.props.id}</h3>
             <h3>Username: {this.props.username}</h3>
             <h3>First Name: {this.props.firstname}</h3>
@@ -67,9 +64,7 @@ class UserProfile extends Component{
         <Footer />
       </div>
     )
-    
   }
-  
 }
 
 export default UserProfile;
