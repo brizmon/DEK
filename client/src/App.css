@@ -904,6 +904,22 @@ textarea {
 }
 
 @media all and (max-width: 800px) {
+/* HEADER adaptive code */
+.header h1 {
+  padding-left: 10px;
+}
+.bars {
+  left: 70px;
+}
+.nav-dropdown{
+  top: 20px;
+  right: 19px;
+}
+
+/* MAIN screen adaptive code */
+  .menu-buttons {
+    width: 260px;
+  }
 
 /* WELCOME screen adaptive code */
 
@@ -945,6 +961,76 @@ textarea {
     font-size: 22px;
     letter-spacing: 1px;
   }
+
+/* MAIN screen adaptive code */
+.cards-container{
+  display: inherit;
+  width: 100%;
+  margin: 0;
+}
+.cards-container div {
+  width: 280px;
+  height: 390px;
+}
+.create-front{
+  margin-bottom: 40px;
+}
+.create-card{
+  height: auto;
+  padding-bottom: 11rem;
+}
+
+/* EDIT screen adaptive code */
+.cards-container-edit{
+  display: inherit;
+  width: 100%;
+  margin: 0;
+}
+.cards-container-edit div {
+  width: 280px;
+  height: 390px;
+}
+.create-front{
+  margin-bottom: 40px;
+}
+.create-card{
+  height: auto;
+  padding-bottom: 11rem;
+}
+.create-back-side-card form input:nth-child(2) {
+  height: 30px;
+  margin-top: 5px;
+}
+.delete-card {
+  height: 30px;
+  margin-top: 5px;
+}
+
+/* QUIZ screen adaptive code */
+.rotate_button {
+  top: -357px;
+}
+.edit_delete_icons {
+  width: 30% !important;
+  top: 265px;
+}
+
+
+
+
+
+/* PICK QUIZ screen adaptive code */
+.pickquiz-form {
+  flex-direction: column;
+  align-items: inherit;
+}
+.pickquiz-form a {
+  margin-bottom: 40px;
+}
+.pick-quiz-type{
+  height: auto;
+  padding-bottom: 11rem;
+}
 
 /*REGISTER responsive desing smaller screen*/
 
