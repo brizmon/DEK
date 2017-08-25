@@ -48,9 +48,9 @@ app.use(passport.session());
 
 //routes
 
-// app.get('/', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-// });
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 const authRoutes = require('./routes/auth-routes.js');
 app.use('/auth', authRoutes);
@@ -68,7 +68,6 @@ app.get('/logout', function(req, res){
   req.logout();
   res.redirect('/');
 });
-
 
 
 

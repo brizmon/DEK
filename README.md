@@ -1,10 +1,10 @@
-# Group Project 3
+# Group Project 3 - DEK
 
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
-![img1](./images/Main-menu-shot.png)
-
 ![img1](./images/Welcome-page-shot.png)
+
+![img1](./images/Main-menu-shot.png)
 
 ## User Story
 'DEK' is an app which allows users to create their own unique stack of flash cards to aid in the learning process. This app can be used to learn a new language (foreign or programming) or any new subject which requires memorization.
@@ -21,19 +21,26 @@ When the user is reviewing flash cards, the user will view the front side of a f
 
 Each card can also be deleted, or edited and updated.
 
+DEK is deployed at:  https://dek-flashcards.herokuapp.com/
+
 ## Technologies
-[ADD TEXT]
+
+### React
+The App will use React to create the front-end file structure.
+
+### Express
+The Express-Backend will handle the requests that the front end sends. This happens via routing requests. 
+
+### SQL
+The approach of our card system will be sorting the user's cards into an array of database tables that each dictate a certain point of time in the future when the card should prompt again. Each card will have a tally coloumn that updates based on whether the user got the question right or wrong.
+
+### Auth
+As typical authorization happens, the user will get to a register/login screen as a landing page. From there the user will send a request to the server which will start a connection. 
 
 ### Sample Code
 [ADD CODE SNIPPETS]
 
 ## Making of the App
-[ADD TEXT]
-
-### Wireframes
-[ADD IMAGES]
-
-### Challenges
 [ADD TEXT]
 
 ## Future Improvements

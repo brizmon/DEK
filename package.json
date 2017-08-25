@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon app.js",
-    "debugger": "DEBUG=*:* nodemon app.js"
+    "debugger": "DEBUG=*:* nodemon app.js",
+    "deploy": "cd client && yarn build && cp -a ./build/ ../public/",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
