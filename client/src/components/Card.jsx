@@ -44,16 +44,7 @@ class Card extends Component{
     }
     handleDeleteFormSubmit = (e) => {
         e.preventDefault();
-        // console.log('this is where we should delete to /decks')
-        // console.log(this.props.card)
         axios.delete(`/decks/${this.state.id}`,this.state);
-        // .then(res => {
-        //     console.log("Delete Complete")
-        //     this.props.handleRedirect('/main');
-        // })
-        // .catch(err => {
-        //     console.log(err);
-        // })
         console.log("Delete Complete")
         this.props.handleRedirect('/main');
     }

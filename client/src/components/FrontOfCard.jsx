@@ -45,9 +45,8 @@ class FrontOfCard extends Component{
                     <div className="cards-container">
                         <div className="create-front">
                             <div className="create-front-side-card">
+                                <div>
                                 <h1 className="quiz_question">{this.state.question}</h1>
-                                <div className="edit_delete_icons">
-                                    <Link Link to="/editcards"><i className="fa fa-pencil" aria-hidden="true"></i></Link>
                                 </div>
                             </div>
                         </div>

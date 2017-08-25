@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, {Component} from 'react';
 import moment from 'moment';
 import FontAwesome from 'react-fontawesome';
+import {Link} from 'react-router-dom';
 
 
 class BackOfCard extends Component{
@@ -61,19 +62,11 @@ class BackOfCard extends Component{
         if(this.state.correct){
             futureMoment = moment(currentMoment).add(2,'days').format()
         }
-        // console.log(futureMoment);
-
 
         let stateCopy = this.state;
         stateCopy.setTime = futureMoment;
         stateCopy.correct = true;
-        // needs to be a delay here
-        // put to database with correct:true, time: currentTime+3h
         axios.put(`/decks/${this.state.id}`,stateCopy)
-        // .then(res => {
-        //     // have some animation here
-            
-        // })
         this.handleNextCard(e)
     }
 
@@ -93,6 +86,7 @@ class BackOfCard extends Component{
                     <div className='right-wrong'>
                         <button onClick={this.handleIncorrect} className='incorrect-button'><i className="fa fa-times" aria-hidden="true"></i></button>
                         <button onClick={this.handleCorrect} className='correct-button'><i className="fa fa-check" aria-hidden="true"></i></button>
+                        <Link Link to="/editcards" className='edit-redirect-button'><i className="fa fa-pencil" aria-hidden="true"></i></Link>
                     </div>
                 </div>
 
