@@ -69,7 +69,7 @@ class CuratedQuizScreen extends Component{
   displayScore = () => {
     if(this.state.cards.length > 0){
       return (
-        <h1>Score: {this.state.numberCorrect*100/(this.state.numberCorrect+this.state.numberWrong)}%</h1>
+        <h1>Score: {parseInt(this.state.numberCorrect*100/(this.state.numberCorrect+this.state.numberWrong))}%</h1>
       )
     }
     return(
