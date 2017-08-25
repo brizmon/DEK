@@ -66,7 +66,8 @@ html {
 body {
   margin:0;
   padding:0;
-  height:100vh;
+  height:100%;
+  font-family: 'Poppins', sans-serif;
 }
 input:focus,
 select:focus,
@@ -294,7 +295,7 @@ a:focus { text-decoration: none; color: inherit; }
   background: #F2EEE2;
 }
 input::placeholder {
-  color: #F2EEE2;
+  color: #f81b84;
 }
 /*  ---------------- LOG IN PAGE  ---------------- */
 .login-wrap {
@@ -447,6 +448,12 @@ input::placeholder {
 }
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
+
+.create-card-quiz {
+  height: 100vh;
+  position: relative;
+  background: #43C0F6;
+}
 
 .create-card {
   height: 100vh;
@@ -701,8 +708,8 @@ textarea {
 }
 .quiz_question {
   text-align: center;
-  font-size: 35px;
-  line-height: 35px;
+  font-size: 20px;
+  line-height: 23px;
 }
 .quiz_answer {
   text-align: center;
@@ -751,6 +758,33 @@ textarea {
 .fa-trash {
   padding-left: 10px;
   font-size: 25px;
+}
+.cards-container-quiz{
+  display: flex;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  top: 65px;
+}
+.create-front-quiz{
+  width: 310px;
+  height: 450px;
+  background: #F2EEE2;
+  margin: 0 auto;
+  border-radius: 25px;
+  position: relative;
+  top: 60px;
+  font-family: 'Poppins', sans-serif;
+}
+.create-front-side-card-quiz{
+  position: relative;
+  border: 1px solid lightslategrey;
+  height: 350px;
+  width: 240px;
+  overflow: scroll;
+  border-radius: 11px;
+  top: 68px;
+  margin: 0 auto;
 }
 
 
@@ -933,6 +967,10 @@ textarea {
   .menu-buttons {
     width: 260px;
   }
+/* ABOUT screen adaptive code */
+  .about-app-message p{
+    font-size: 15px;
+  }
 
 /* WELCOME screen adaptive code */
 
@@ -977,6 +1015,23 @@ textarea {
 
 /* MAIN screen adaptive code */
 
+.cards-container{
+   display: inherit; 
+  width: 100%;
+  margin: 0;
+}
+.cards-container div {
+  width: 280px;
+  height: 390px;
+}
+.create-front{
+  margin-bottom: 40px;
+}
+.create-card{
+  height: auto;
+  padding-bottom: 11rem;
+ }
+  
 .create-front h1{
   font-size: 25px;
 }
@@ -1015,6 +1070,14 @@ textarea {
 .edit_delete_icons {
   width: 30% !important;
   top: 265px;
+}
+.cards-container-quiz{
+  width: 280px;
+}
+
+/* SCORE screen adaptive code */
+.scoreScreen{
+  width: 85%;
 }
 
 /* PICK QUIZ screen adaptive code */

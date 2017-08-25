@@ -74,10 +74,9 @@ class BackOfCard extends Component{
         if(this.state.didMount){
             return(
                 <div className="quiz_back_card_container">
-                    <div className="cards-container">
+                    <div className="cards-container-quiz">
 
                         <div className="create-back-quiz">
-
                             <div className="create-back-side-card quiz_back_card">
                                 <h1 className="quiz_answer">{this.state.answer}</h1>
                             </div>

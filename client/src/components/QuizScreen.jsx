@@ -102,7 +102,7 @@ class QuizScreen extends Component{
   render(){
     if(this.state.gotCards){
       return (
-        <div className='create-card'>
+        <div className='create-card-quiz'>
           <Header />
           {this.decideWhichSideOfCard()}
           <Footer />
