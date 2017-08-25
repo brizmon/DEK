@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import {Link} from 'react-router-dom';
+
 class FrontOfCard extends Component{
     constructor(){
         super();
@@ -45,8 +47,7 @@ class FrontOfCard extends Component{
                             <div className="create-front-side-card">
                                 <h1 className="quiz_question">{this.state.question}</h1>
                                 <div className="edit_delete_icons">
-                                    <i className="fa fa-pencil" aria-hidden="true"></i>
-                                    <i className="fa fa-trash" aria-hidden="true"></i>
+                                    <Link Link to="/editcards"><i className="fa fa-pencil" aria-hidden="true"></i></Link>
                                 </div>
                             </div>
                         </div>
