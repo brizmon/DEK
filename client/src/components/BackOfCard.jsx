@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, {Component} from 'react';
-import moment from 'moment'
-
+import moment from 'moment';
+import FontAwesome from 'react-fontawesome';
 
 
 class BackOfCard extends Component{
