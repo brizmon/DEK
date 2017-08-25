@@ -56,7 +56,6 @@ table {
     src: url('axis-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 /*  ---------------- GENERAL  ---------------- */
@@ -301,7 +300,7 @@ input::placeholder {
 .login-wrap {
   width: 45%;
   height: 45%;
-  background: #f81b84;
+  background: #43C0F6;
   margin: 0 auto;
   position: relative;
   top: 111px;
@@ -338,7 +337,7 @@ input::placeholder {
   width: 100px;
   margin: 0 auto;
   padding-left: 0;
-  background: #43C0F6;
+  background: #f81b84;
   color: black;
   cursor: pointer;
   font-weight: 600;
@@ -883,11 +882,123 @@ textarea {
 }
 .right-wrong button:hover {
   background: #F81B84;
-  color: white; 
+  color: white;
 }
 .correct-button {
   margin-right: 20px;
 }
 .incorrect-button {
   margin-left: 20px;
+}
+
+@media all and (max-width: 800px) {
+
+/* WELCOME screen adaptive code */
+
+  .welcome-user-name p{
+    font-size: 30px;
+    margin-top: 100px;
+  }
+
+  .border{
+    border: 0px solid #F5CE28;
+  }
+
+  .welcome h1 {
+    font-size: 50px;
+  }
+
+  .welcome h2 {
+   top: 150px;
+   font-size: 16px;
+   line-height: 25px;
+  }
+
+  .auth-buttons {
+    top: 175px;
+  }
+
+  .auth-button-1 {
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .auth-button-2 {
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+/*REGISTER responsive desing smaller screen*/
+
+  .register-wrap {
+    top: 90px;
+    border-radius: 30px;
+    width: 70%;
+    height: 70%;
+  }
+
+  .register-wrap h1 {
+    font-size: 50px;
+    top: -30px;
+  }
+
+  .register-container form input {
+    margin-bottom: 20px;
+    height: 35px;
+    border-radius: 50px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-left: 10px;
+  }
+
+  .register-container form input:nth-child(6){
+    width: 100px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+ /* LOGIN page responsive design */
+
+  .login-wrap {
+    width: 70%;
+    height: 70%;
+    top: 111px;
+    border-radius: 30px;
+  }
+
+  .login-wrap h1 {
+    font-size: 75px;
+    top: -40px;
+  }
+
+  .login-container {
+    height: 100vh;
+  }
+
+  .login-container form {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .login-container form input {
+    margin-bottom: 20px;
+    height: 33px;
+    border-radius: 50px;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .login-container form input:nth-child(3){
+    width: 100px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+
 }
