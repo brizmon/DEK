@@ -868,18 +868,26 @@ textarea {
 .right-wrong {
   width: 20%;
   height: 50px;
-  background: red;
   margin: auto;
   position: relative;
   top: 70px;
   text-align: center;
 }
 .right-wrong button {
-  background: blue;
+  background: #f5ce28;
   width: 60px;
   height: 60px;
   border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+}
+.right-wrong button:hover {
+  background: #F81B84;
+  color: white; 
 }
 .correct-button {
-
+  margin-right: 20px;
+}
+.incorrect-button {
+  margin-left: 20px;
 }
