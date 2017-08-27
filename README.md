@@ -37,6 +37,9 @@ The App uses database tables that each set a certain point of time in the future
 ### Auth
 The app uses auth for unique user registration/login.
 
+### NPM Package React-Fontawesome:
+The app uses the NPM Package 'react-fontawesome' to create the menu bars in the upper-right of the screen so the user knows where to access the drop-down menu, which allows the user to see a user profile page, visit a page about the app, or logout.
+
 ### Sample Code
 
 Here is the code in client/src/App.js for routing/navigation through the App:
@@ -61,6 +64,21 @@ Here is the code in client/src/App.js for routing/navigation through the App:
     </Router>
 
 
+Here is the code in db/migrations/migration_08_2017.sql for creating the table of cards in the user's deck:
+
+    CREATE TABLE deck(
+        id BIGSERIAL PRIMARY KEY,
+        question TEXT,
+        answer TEXT,
+        correct BOOLEAN NOT NULL,
+        setTime VARCHAR NOT NULL,
+        timesRight INT NOT NULL,
+        timesWrong INT NOT NULL,
+        user_id INT REFERENCES users(id) NOT NULL,
+        deckNumber INT NOT NULL
+    );
+
+
 Here is the code in models/deck.js for filtering the flashcards for the 'curated quiz':
 
     Deck.findByTime = (user_id, moment) => {
@@ -74,8 +92,10 @@ Here is the code in models/deck.js for filtering the flashcards for the 'curated
     }
 
 ## Making of the App
+
 DEK was a team effort. Brandon Hew played the role of our Git dictator, resolving code conflicts as each member submitted code (as well as fixing the team's bugs and errors along the way). Briseida Montiel worked primarily on the front-end design/CSS code. Daniel Beebe worked primarily on the React components and React routing/navigation through the App. Ivan Alvarian worked primarily on back-end, setting up the App's database and utilizing it in taking a quiz.
 
 ## Future Improvements
+
 With additional time, we would like to improve this app by: (1) allowing the user to create multiple decks; and (2) add additional visual effects when the user takes a quiz.
 
