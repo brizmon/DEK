@@ -99,3 +99,37 @@ DEK was a team effort. Brandon Hew played the role of our Git dictator, resolvin
 
 With additional time, we would like to improve this app by: (1) allowing the user to create multiple decks; and (2) add additional visual effects when the user takes a quiz.
 
+Below is the design to make the card selections more user friendly, by implementing a flip effect
+for transition between the front and back of the card, using keyframes.
+
+    <!-- html -->
+
+    <div class="red"></div>
+    <div class="blue"></div>  
+
+    <!-- css -->
+
+    .red {
+      height: 200px;
+      width: 150px;
+      background-color: red;
+      position: absolute;
+      animation: orbit 2s linear;
+      animation-fill-mode: foward;
+    }
+
+    .blue {
+      height: 200px;
+      width: 150px;
+      background-color: blue;
+      animation: orbit 2s linear;
+      animation-fill-mode: forwards;
+      
+      backface-visibility: hidden;
+    }
+
+    @keyframes orbit{
+      from{transform: rotateY(0deg)}
+      to{transform: rotateY(180deg)}
+    } 
+
