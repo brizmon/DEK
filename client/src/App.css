@@ -606,7 +606,7 @@ textarea {
 }
 .pick-quiz-type h2{
   text-align: center;
-  top: 115px;
+  top: 65px;
   font-size: 30px;
   position: relative;
   text-transform: uppercase;
@@ -617,7 +617,7 @@ textarea {
 .pickquiz-form{
   display: flex;
   position: relative;
-  top: 165px;
+  top: 125px;
   justify-content: center;
   align-items: center;
   padding: 0 5vw 0 5vw;
@@ -630,7 +630,7 @@ textarea {
   font-family: 'Karla', sans-serif;
   color: white;
   text-align: center;
-  background: #f81b84;
+  background: #F7CA18;
   justify-content: center;
   margin: 0 5vw 0 5vw;
   border-radius: 40px;
@@ -643,7 +643,7 @@ textarea {
   font-family: 'Karla', sans-serif;
   color: white;
   text-align: center;
-  background: #F5CE28;
+  background: #394cfe;
   margin: 0 5vw 0 5vw;
   border-radius: 40px;
 }
@@ -670,19 +670,19 @@ textarea {
 }
 
 .pickquiz-button-one:hover {
-  background-color: #f2EEE2;
+  background-color: #394cfe;
 }
 
 .pickquiz-button-one:hover p {
-  color: #F81B84;
+  color: #F7CA18;
 }
 
 .pickquiz-button-two:hover {
-  background: #f2EEE2;
+  background: #F7CA18;
 }
 
 .pickquiz-button-two:hover p {
-  color: #F5CE28;
+  color: #394cfe;
 }
 .quiz_question {
   text-align: center;
@@ -729,10 +729,7 @@ textarea {
   top: 285px;
   color: #f81b84;
 }
-.fa-pencil {
-  padding-right: 10px;
-  font-size: 25px;
-}
+
 .fa-trash {
   padding-left: 10px;
   font-size: 25px;
@@ -899,7 +896,7 @@ textarea {
 }
 
 .right-wrong button:hover {
-  background: #F81B84;
+  background: #394cfe;
   color: white;
 }
 .correct-button {
@@ -910,18 +907,8 @@ textarea {
   margin-left: 20px;
 }
 
-.edit-redirect-button {
-  background: #f5ce28;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  font-size: 30px;
-  cursor: pointer;
-  padding: 12px 12px 12px 12px;
-}
-
 .edit-redirect-button:hover {
-  background: #F81B84;
+  background: #394cfe;
   color: white;
 }
 
