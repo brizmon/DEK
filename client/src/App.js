@@ -15,6 +15,7 @@ import QuizScreen from './components/QuizScreen';
 import CuratedQuizScreen from './components/CuratedQuizScreen';
 import EditCards from './components/EditCards';
 import AboutApp from './components/AboutApp';
+import Header from './components/Header';
 
 import axios from 'axios';
 
@@ -98,12 +99,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
+          <Route exact path="/" render={() => <Welcome />} />
+          <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
+          <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
           <div className="main">
-            <Route exact path="/" render={() => <Welcome />} />
-            <Route exact path="/aboutapp" render={() => <AboutApp />} />
+            <Header />
+            <Route exact path="/aboutapp" render={() => <AboutApp />}/>
             <Route exact path="/main" render={() => <Main handleRedirect={this.handleRedirect} firstname={this.state.user.firstname}/>} />
-            <Route exact path="/register" render={() => <Register handleRegisterSubmit={this.handleRegisterSubmit} />} />
-            <Route exact path="/login" render={() => <Login handleLoginSubmit={this.handleLoginSubmit} />} />
             <Route exact path="/userprofile" render={() => <UserProfile handleRedirect={this.handleRedirect} id={this.state.user.id} username={this.state.user.username} firstname={this.state.user.firstname} lastname={this.state.user.lastname} email={this.state.user.email}/>} />
             <Route exact path="/createcard"  render={() => <CreateCard handleRedirect={this.handleRedirect} state={this.state} />} />
             <Route exact path="/pickquiztype" component={PickQuizType} />

@@ -8,7 +8,7 @@ const PickQuizType = (props) => {
 
   return (
     <div className='pick-quiz-type'>
-      <Header />
+    
 
       <h2>Pick Your Quiz Type!</h2>
       <div className='pickquiz-form'>

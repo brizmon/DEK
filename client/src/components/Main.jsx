@@ -6,9 +6,6 @@ const Main = (props) => {
 
   return (
     <div className='main-menu'>
-
-      <Header />
-
       <div className="welcome-user-name">
         <p>Welcome, {props.firstname}</p>
       </div>
@@ -26,3 +23,5 @@ const Main = (props) => {
 }
 
 export default Main;
+
+

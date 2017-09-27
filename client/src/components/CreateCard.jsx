@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-
 import axios from 'axios';
-
-import Header from './Header';
 import Footer from './Footer';
 
 class CreateCard extends Component{
@@ -46,7 +43,7 @@ class CreateCard extends Component{
     return (
       <div className='create-card'>
 
-      <Header />
+      
 
         <h2>Create a Card!</h2>
           <div className="cards-container">

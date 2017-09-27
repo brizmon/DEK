@@ -66,7 +66,7 @@ class EditCards extends Component{
       return (
 
         <div className='edit-screen'>
-          <Header />
+          
 
           <div className="edit-container">
             {this.showEditCards()}

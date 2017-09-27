@@ -8,8 +8,6 @@ const AboutApp = () => {
   return (
     <div className='about-app'>
 
-      <Header />
-
       <div className="about-app-message">
         <h2>About DEK</h2>
         <p>DEK is an app which allows you to create your own unique stack of flash cards to aid in the learning process. DEK can be used to learn a new language, study history, or learn any subject requiring memorization.</p>

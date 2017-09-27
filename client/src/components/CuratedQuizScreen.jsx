@@ -103,7 +103,7 @@ class CuratedQuizScreen extends Component{
     if(this.state.gotCards){
       return (
         <div className='create-card'>
-          <Header />
+      
           {this.decideWhichSideOfCard()}
           <Footer />
         </div>

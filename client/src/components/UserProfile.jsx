@@ -39,7 +39,7 @@ class UserProfile extends Component{
     if(this.state.gotCards){
       return (
         <div className='user-profile'>
-          <Header />
+         
 
           <div className="user-profile-info">
             <h2>Your Profile</h2>
@@ -57,7 +57,6 @@ class UserProfile extends Component{
     }
     return (
       <div className='user-profile'>
-        <Header />
 
         <div className="user-profile-info">
           <h1>Loading Card Info</h1>
