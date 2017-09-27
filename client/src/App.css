@@ -86,12 +86,13 @@ a:focus { text-decoration: none; color: inherit; }
 /* a:hover, a:active { text-decoration: none; color:black } */
 
 /*  ---------------- NAV  ---------------- */
-.logo {
+.nav-wrapper h1 {
   font-family: 'axisbold';
   font-size: 50px;
   letter-spacing: 5px;
   text-transform: uppercase;
   padding-left: 50px;
+  padding-top: 10px;
 }
 
 .bars {
@@ -338,7 +339,12 @@ a:focus { text-decoration: none; color: inherit; }
 .main-menu {
   height: 100vh;
   position: relative;
-  /* background-color: #43C0F6; */
+}
+.main-menu h1 {
+  text-align: center;
+  padding-top: 150px;
+  font-size: 50px;
+
 }
 .welcome-user-name {
   display: flex;
@@ -361,7 +367,7 @@ a:focus { text-decoration: none; color: inherit; }
   /* background-color: #43C0F6; */
 }
 .menu-button{
-  background: #F81B84;
+  background: #F7CA18;
   flex: 250px 0;
   border-radius: 15px;
   height: 85px;
@@ -370,30 +376,12 @@ a:focus { text-decoration: none; color: inherit; }
   font-family: 'Karla', sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
-  color: #F2EEE2;
+  color: white;
+  text-transform: capitalize;
 }
 
 .menu-button:hover {
-   background: #F2EEE2;
-   color: #F81B84;
-}
-
-.menu-button-edit{
-  background: #F5CE28;
-  flex: 250px 0;
-  border-radius: 15px;
-  height: 85px;
-  cursor: pointer;
-  font-size: 25px;
-  font-family: 'Karla', sans-serif;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #F2EEE2;
-}
-
-.menu-button-edit:hover {
-   background: #F2EEE2;
-   color: #F5CE28;
+   background: #394cfe;
 }
 
 
@@ -412,7 +400,8 @@ a:focus { text-decoration: none; color: inherit; }
   max-width: 500px;
   position: relative;
   height: 350px;
-  border: 10px solid #F5CE28;
+  border: 10px solid #F7CA18;
+  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #F7CA18 1%, #F7CA18 8%) 10;
   margin: 0 auto;
   text-align: center;
 }
@@ -451,11 +440,11 @@ a:focus { text-decoration: none; color: inherit; }
   width: 85%;
   margin: 0 auto;
   position: relative;
-  top: 65px;
+  top: 35px;
 }
 .create-card h2 {
   text-align: center;
-  top: 90px;
+  top: 60px;
   font-size: 30px;
   position: relative;
   text-transform: uppercase;
@@ -478,6 +467,7 @@ a:focus { text-decoration: none; color: inherit; }
   position: relative;
   top: 60px;
   font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 .create-front-side-card{
   position: relative;
@@ -524,6 +514,7 @@ a:focus { text-decoration: none; color: inherit; }
   position: relative;
   top: 60px;
   font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 .create-back-side-card{
   position: relative;
@@ -539,16 +530,19 @@ a:focus { text-decoration: none; color: inherit; }
   flex-direction: column;
 }
 textarea {
-  width: 185px;
+  width: 225px;
   margin: 0 auto;
-  height: 215px;
+  height: 265px;
   border-radius: 15px;
   margin-top: 30px;
-  font-size: 15px;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 20px;
   font-family: 'Karla', sans-serif;
   border: none;
   padding-left: 21px;
   padding-right: 21px;
+  background-color: white;
 }
 .create-back-side-card form input:nth-child(2){
   width: 80px;
@@ -584,9 +578,10 @@ textarea {
   max-width: 500px;
   position: relative;
   height: 350px;
-  border: 10px solid #F5CE28;
   margin: 0 auto;
   text-align: center;
+  border: 10px solid #F7CA18;
+  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #F7CA18 1%, #F7CA18 8%) 10;
 }
 .user-profile-info h2 {
   font-family: 'Karla', sans-serif;
@@ -691,8 +686,8 @@ textarea {
 }
 .quiz_question {
   text-align: center;
-  font-size: 20px;
-  line-height: 23px;
+  font-size: 35px;
+  line-height: 40px;
 }
 .quiz_answer {
   text-align: center;
@@ -700,7 +695,7 @@ textarea {
   line-height: 26px;
 }
 .quiz_back_card{
-  border: 1px solid lightslategrey;
+  border: 1px solid transparent;
   height: 350px;
   width: 240px;
   overflow: scroll;
@@ -755,12 +750,13 @@ textarea {
   margin: 0 auto;
   border-radius: 25px;
   position: relative;
-  top: 60px;
+  top: 40px;
   font-family: 'Karla', sans-serif;
+  background: #ECF0F1;
 }
 .create-front-side-card-quiz{
   position: relative;
-  border: 1px solid lightslategrey;
+  border: 1px solid transparent;
   height: 350px;
   width: 240px;
   overflow: scroll;
@@ -815,7 +811,7 @@ textarea {
 }
 .edit-screen h2 {
   text-align: center;
-  top: 115px;
+  top: 55px;
   font-size: 30px;
   position: relative;
   text-transform: uppercase;
@@ -830,7 +826,7 @@ textarea {
   margin: 0 auto;
   position: relative;
   top: 65px;
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 .delete-card {
@@ -867,7 +863,7 @@ textarea {
   background: #f5ce28;
   color: black;
   position: relative;
-  top: -397px;
+  top: -437px;
   display: block;
 }
 
@@ -882,7 +878,7 @@ textarea {
   border-radius: 25px;
   position: relative;
   font-family: 'Karla', sans-serif;
-  margin-top: 10vh;
+  background: #ECF0F1;
 }
 
 .right-wrong {
@@ -935,6 +931,22 @@ textarea {
 nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
   float: right !important;
   font-size: 2.1rem;
+}
+nav .nav-wrapper {
+  background: #394cfe;
+}
+.side-nav {
+  background: #F7CA18;
+}
+.side-nav li>a {
+  color: white;
+  font-size: 35px;
+  height: 78px;
+  padding-bottom: 30px;
+  padding-left: 40px;
+}
+.side-nav li>a:hover {
+  background: #394cfe;
 }
 
 /*  ---------------- REGISTER & LOGIN PAGES  ---------------- */
