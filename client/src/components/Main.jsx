@@ -6,14 +6,14 @@ const Main = (props) => {
 
   return (
     <div className='main-menu'>
-      <div className="welcome-user-name">
-        <p>Welcome, {props.firstname}</p>
-      </div>
+      
+        <h1>Welcome, {props.firstname}!</h1>
+      
 
       <div className='menu-buttons'>
-        <button onClick={(e)=>props.handleRedirect('/createcard')} className='menu-button'>Create Card</button>
-        <button onClick={(e)=>props.handleRedirect('/pickquiztype')} className='menu-button'>Take Quiz</button>
-        <button onClick={(e)=>props.handleRedirect('/editcards')} className='menu-button-edit'>Edit Cards</button>
+        <button onClick={(e)=>props.handleRedirect('/createcard')} className='waves-effect waves-light btn-large menu-button'>Create Card</button>
+        <button onClick={(e)=>props.handleRedirect('/pickquiztype')} className='waves-effect waves-light btn-large menu-button'>Take Quiz</button>
+        <button onClick={(e)=>props.handleRedirect('/editcards')} className='waves-effect waves-light btn-large menu-button'>Edit Cards</button>
       </div>
 
       <Footer />
