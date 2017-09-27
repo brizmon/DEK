@@ -16,8 +16,8 @@ const Welcome = () => {
           </div>
 
           <div className='auth-buttons'>
-            <Link to="/register"><button className="auth-button-1">Sign Up</button></Link>
-            <Link to="/login"><button className="auth-button-2">Log In</button></Link>
+            <Link to="/register"><button className="auth-button waves-effect waves-light btn-large">Sign Up</button></Link>
+            <Link to="/login"><button className="auth-button waves-effect waves-light btn-large">Log In</button></Link>
           </div>
 
         </div>
