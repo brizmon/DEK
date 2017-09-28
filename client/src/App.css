@@ -149,30 +149,6 @@ a:focus { text-decoration: none; color: inherit; }
 }
 
 /*  ---------------- WELCOME PAGE  ---------------- */
-.card-tag {
-    width: 300px;
-    height: 480px;
-    background: #394cfe;
-    border-radius: 30px;
-    position: absolute;
-    z-index: 9;
-    transform: rotate(35deg);
-    box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
-    top: -205px;
-    left: 160px;
-  }
-  .card-tag-two{
-    width: 300px;
-    height: 480px;
-    background: #394cfe;
-    border-radius: 30px;
-    position: absolute;
-    z-index: 9;
-    transform: rotate(140deg);
-    box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
-    top: 135px;
-    right: -129px;
- }
   .border{
     color: #F7CA18;
     border: 10px solid #F7CA18;
@@ -924,11 +900,13 @@ nav .nav-wrapper {
 }
 .side-nav {
   background: #F7CA18;
+  padding-top: 50px;
 }
 .side-nav li>a {
   color: white;
   font-size: 35px;
   height: 78px;
+  line-height: 78px;
   padding-bottom: 30px;
   padding-left: 40px;
 }
@@ -950,8 +928,36 @@ input[type=password]:not(.browser-default):focus:not([readonly]){
 
 
 
+/* ----------- Laptops ----------- */
+@media all and (min-width: 1200px) and (max-width: 1600px) 
+and (-webkit-min-device-pixel-ratio: 1) { 
 
+.card-tag {
+  width: 309px;
+  height: 449px;
+  background: #ecf0f1;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(35deg);
+  box-shadow: 0.8rem 0.1rem 2rem rgba(0,0,0,0.2);
+  top: -205px;
+  left: 135px;
+}
+.card-tag-two{
+  width: 309px;
+  height: 449px;
+  background: #ecf0f1;
+  border-radius: 30px;
+  position: absolute;
+  z-index: 9;
+  transform: rotate(-30deg);
+  box-shadow: 2.2rem 0.4rem 4.8rem rgba(0,0,0,0.4);
+  top: 135px;
+  right: -109px;
+}
 
+}
 
 
 
@@ -984,9 +990,6 @@ input[type=password]:not(.browser-default):focus:not([readonly]){
     margin-top: 100px;
   }
 
-  .border{
-    border: 0px solid #F5CE28;
-  }
 
   .welcome h1 {
     font-size: 50px;
