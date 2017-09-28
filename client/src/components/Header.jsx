@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Header = (props) => {
 
     return (
-      <div>
+      <div className="dek-header">
         
         <nav className="default" role="navigation">
           <div className="nav-wrapper">
