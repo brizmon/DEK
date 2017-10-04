@@ -7,8 +7,7 @@ const Main = (props) => {
   return (
     <div className='main-menu'>
       
-        <h1>Welcome, {props.firstname}!</h1>
-      
+        {props.firstname !== undefined ? <h1>Welcome, {props.firstname}!</h1> : props.handleRedirect('/')}
 
       <div className='menu-buttons'>
         <button onClick={(e)=>props.handleRedirect('/createcard')} className='waves-effect waves-light btn-large menu-button'>Create Card</button>
