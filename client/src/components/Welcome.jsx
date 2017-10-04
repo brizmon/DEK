@@ -8,7 +8,7 @@ const Welcome = () => {
   const imgCard2 = {
     backgroundImage: 'url(../img/deck-card-1.png)',
   };
-
+  
   return (
       <div className="white-border">
         <div style={imgCard1} className="card-tag"></div>
