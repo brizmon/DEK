@@ -2,9 +2,11 @@
 
 Team members: Brandon Hew, Briseida Montiel, Daniel Beebe, Ivan Alvarian
 
-![img1](./images/Welcome-page-shot.png)
+![img1](./images/17.png)
 
-![img1](./images/Main-menu-shot.png)
+![img1](./images/18.png)
+
+![img1](./images/19.png)
 
 ## User Story
 'DEK' is an app which allows users to create their own unique stack of flash cards to aid in the learning process. This app can be used to learn a new language (foreign or programming) or any new subject which requires memorization.
@@ -21,7 +23,7 @@ When the user is reviewing flash cards, the user will view the front side of a f
 
 Each card can also be deleted, or edited and updated.
 
-DEK is deployed at:  https://dek-flashcards.herokuapp.com/
+DEK is deployed at:  https://dek-app.herokuapp.com/
 
 ## Technologies
 
