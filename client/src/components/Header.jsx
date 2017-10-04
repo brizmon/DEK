@@ -2,9 +2,16 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Header = (props) => {
-
+    const style = {
+      hideNav: {
+        display: 'none'
+      },
+      showNav: {
+        display: 'block'
+      }
+    }
     return (
-      <div className="dek-header">
+      <div className="dek-header" style={ props.firstname == undefined ? style.hideNav : style.showNav}>
         
         <nav className="default" role="navigation">
           <div className="nav-wrapper">
