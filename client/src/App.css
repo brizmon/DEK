@@ -154,7 +154,7 @@ a:focus { text-decoration: none; color: inherit; }
     border: 10px solid #F7CA18;
     border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #F7CA18 1%, #F7CA18 8%) 10;
     height: 96vh;
-    width: 98%;
+    width: 97%;
     margin: 1%;
     position: absolute;
   }
@@ -359,44 +359,29 @@ a:focus { text-decoration: none; color: inherit; }
 .menu-button:hover {
    background: #394cfe;
 }
+.menu-button:focus{
+  background: #F7CA18;
+}
 
 
 /*  ---------------- ABOUT APP PAGE ---------------- */
-
-.about-app {
-  height: 100vh;
+.about {
   position: relative;
-  /* background-color: #43C0F6; */
+  top: 50px;
 }
-.about-app-message {
-  top: 20vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 500px;
-  position: relative;
-  height: 350px;
-  border: 10px solid #F7CA18;
-  border-image: repeating-linear-gradient( 45deg, #394cfe, #394cfe 1%, #F7CA18 1%, #F7CA18 8%) 10;
-  margin: 0 auto;
-  text-align: center;
+.about-headline {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.about p {
+  font-size: 23px;
+  line-height: 30px;
+}
+.first-p {
+  text-align: right;
 }
 
-.about-app-message h2 {
-  font-family: 'Karla', sans-serif;
-  font-size: 30px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
 
-.about-app-message p {
-  font-family: 'Karla', sans-serif;
-  padding: 5px 5px 5px 5px;
-  font-size: 18px;
-}
 
 /*  ---------------- CREATE CARD PAGE (front) ---------------- */
 
@@ -530,13 +515,12 @@ textarea {
   margin-top: 20px;
   font-family: 'Karla', sans-serif;
   cursor: pointer;
-  background: #F81B84;
+  background: #F7CA18;
   color: white;
+  font-weight: 600;
 }
 .create-back-side-card form input:nth-child(2):hover {
-  background: #F5CE28;
-  color: black;
-  font-weight: 600;
+  background: #394cfe;
 }
 
 
@@ -667,7 +651,7 @@ textarea {
 }
 .quiz_answer {
   text-align: center;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 26px;
 }
 .quiz_back_card{
@@ -812,14 +796,13 @@ textarea {
   margin-top: 10px;
   font-family: 'Karla', sans-serif;
   cursor: pointer;
-  background: #F81B84;
+  background: #394cfe;
   color: white;
+  font-weight: 600;
 }
 
 .delete-card:hover {
-  background: #F5CE28;
-  color: black;
-  font-weight: 600;
+  background: #F7CA18;
 }
 
 /*  ---------------- QUIZ SCREEN PAGE ---------------- */
@@ -979,12 +962,24 @@ and (-webkit-min-device-pixel-ratio: 1) {
     width: 260px;
   }
 /* ABOUT screen adaptive code */
-  .about-app-message p{
-    font-size: 15px;
+  .about p {
+    font-size: 19px;
+    line-height: 25px;
+  }
+  .first-p{
+    text-align: left;
+    padding-bottom: 20px;
   }
 
 /* WELCOME screen adaptive code */
-
+  .border {
+    height: 95vh;
+    width: 92%;
+    margin: 4%;
+  }
+  .welcome-message {
+    width: 70%;
+  }
   .welcome-user-name p{
     font-size: 30px;
     margin-top: 100px;
@@ -992,33 +987,26 @@ and (-webkit-min-device-pixel-ratio: 1) {
 
 
   .welcome h1 {
-    font-size: 50px;
+    font-size: 70px;
   }
 
   .welcome h2 {
-   top: 150px;
-   font-size: 16px;
-   line-height: 25px;
+   top: 90px;
+   font-size: 22px;
+   line-height: 26px;
   }
 
   .auth-buttons {
-    top: 175px;
+    top: 105px;
+    flex-direction: column;
   }
-
-  .auth-button-1 {
-    width: 130px;
-    height: 40px;
-    border-radius: 50px;
-    font-size: 22px;
-    letter-spacing: 1px;
+  .auth-button:nth-child(1){
+    margin-bottom: 15px;
   }
-
-  .auth-button-2 {
+  .auth-button{
     width: 130px;
-    height: 40px;
-    border-radius: 50px;
-    font-size: 22px;
-    letter-spacing: 1px;
+    height: 50px;
+    font-size: 15px;
   }
 
 /* MAIN screen adaptive code */
