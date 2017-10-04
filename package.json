@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BStudies/Group_Project_3.git"
+    "url": "git+https://github.com/brizmon/Group_Project_3.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BStudies/Group_Project_3/issues"
+    "url": "https://github.com/brizmon/Group_Project_3/issues"
   },
-  "homepage": "https://github.com/BStudies/Group_Project_3#readme",
+  "homepage": "https://github.com/brizmon/Group_Project_3#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.17.2",
